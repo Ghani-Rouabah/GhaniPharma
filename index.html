@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="GhaniPharma - Votre plateforme complète pour les études pharmaceutiques. Cours, TPs, TDs, examens et ressources pédagogiques pour étudiants en pharmacie.">
-    <meta name="keywords" content="pharmacie, études pharmaceutiques, cours pharmacie, TPs pharmacie, TDs pharmacie, examens pharmacie, étudiants pharmacie, ressources pédagogiques, GhaniPharma, sciences pharmaceutiques">
+    <meta name="keywords" content="pharmacie, études pharmaceutiques, cours pharmacie, TPs pharmacie, TDs pharmacie, examens pharmacie, étudiants pharmacie, ressources pédagogiques, GhaniPharma, sciences pharmaceutiques, غاني فارما, دروس صيدلة في الجزائر">
     <meta name="author" content="GhaniPharma">
     <meta name="robots" content="index, follow">
     <!-- للشبكات الاجتماعية -->
@@ -101,6 +101,8 @@
         header nav ul li a:hover {
             color: #fff;
         }
+        
+        /* شعار كبسولة الدواء المحسن */
         .logo a {
             color: #00bcd4;
             text-decoration: none;
@@ -110,14 +112,54 @@
             align-items: center;
             gap: 8px;
             transition: all 0.3s ease;
-            padding: 5px 10px;
+            padding: 8px 15px;
             border-radius: 8px;
+            position: relative;
+            overflow: hidden;
         }
+        
+        .logo a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .logo a:hover::before {
+            left: 100%;
+        }
+        
         .logo a:hover {
             color: #0288d1;
-            background: rgba(0, 188, 212, 0.1);
+            background: rgba(0, 188, 212, 0.15);
             transform: scale(1.05);
             text-shadow: 0 0 8px rgba(0, 188, 212, 0.5);
+            box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+        }
+        
+        .pill-icon {
+            font-size: 1.8rem;
+            position: relative;
+            display: inline-block;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        
+        .logo a:hover .pill-icon {
+            animation: pillBounce 0.6s ease;
+            color: #ff4081;
+            text-shadow: 0 0 10px rgba(255, 64, 129, 0.7);
+        }
+        
+        @keyframes pillBounce {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            25% { transform: scale(1.2) rotate(-10deg); }
+            50% { transform: scale(1.1) rotate(10deg); }
+            75% { transform: scale(1.15) rotate(-5deg); }
         }
         
         .dropdown-content {
@@ -225,6 +267,7 @@
             overflow: hidden;
         }
         
+        /* تعديل التدرج اللوني للحواف العلوية */
         .section::before {
             content: '';
             position: absolute;
@@ -232,7 +275,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #ffeb3b, #00bcd4, #6a1b9a);
+            background: linear-gradient(90deg, #ffeb3b, #00bcd4);
         }
         
         .section:hover {
@@ -331,6 +374,7 @@
             overflow: hidden;
         }
         
+        /* تعديل التدرج اللوني للحواف العلوية */
         .stats-section::before {
             content: '';
             position: absolute;
@@ -338,7 +382,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #00bcd4, #ffeb3b, #6a1b9a);
+            background: linear-gradient(90deg, #ffeb3b, #00bcd4);
         }
         
         .stats-section:hover {
@@ -564,13 +608,74 @@
             border: 1px solid #f44336;
         }
         
+        /* أنماط جديدة للفوتر */
         footer {
             background-color: rgba(0, 0, 0, 0.5);
             color: #ffeb3b;
             text-align: center;
-            padding: 20px 15px;
+            padding: 30px 15px;
             width: 100%;
             margin-top: 40px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255, 235, 59, 0.2), rgba(0, 188, 212, 0.2));
+            color: #ffeb3b;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: 1px solid rgba(255, 235, 59, 0.3);
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            background: linear-gradient(135deg, rgba(255, 235, 59, 0.3), rgba(0, 188, 212, 0.3));
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+        
+        .social-link.youtube:hover {
+            color: #ff0000;
+            border-color: #ff0000;
+        }
+        
+        .social-link.facebook:hover {
+            color: #1877f2;
+            border-color: #1877f2;
+        }
+        
+        .social-link.instagram:hover {
+            color: #e4405f;
+            border-color: #e4405f;
+        }
+        
+        .social-link.tiktok:hover {
+            color: #69c9d0;
+            border-color: #69c9d0;
+        }
+        
+        .copyright {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #e0e0e0;
         }
         
         /* المعرض للهاتف - التصميم الأصلي */
@@ -650,6 +755,55 @@
                 display: block;
                 animation: fadeIn 0.3s ease;
             }
+        }
+        
+        /* أنماط جديدة للأقسام المضافة */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .card {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+            border: 1px solid rgba(255, 235, 59, 0.3);
+            border-radius: 12px;
+            padding: 25px;
+            color: #fff;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ffeb3b, #00bcd4);
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 235, 59, 0.5);
+        }
+        
+        /* إزالة جميع المحتويات من البطاقات */
+        .card-icon,
+        .card h3,
+        .card p {
+            display: none;
         }
         
         @media (max-width: 768px) {
@@ -806,13 +960,37 @@
                 padding: 12px 25px;
                 font-size: 1rem;
             }
+            
+            /* تعديلات الهاتف للبطاقات */
+            .cards-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .card {
+                padding: 20px;
+                min-height: 150px;
+            }
+            
+            /* تعديلات الهاتف للفوتر */
+            .social-links {
+                gap: 15px;
+            }
+            
+            .social-link {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
         }
     </style>
 </head>
 <body>
     <header id="mainHeader">
         <div class="logo">
-            <a href="index.html">💊 GhaniPharma</a>
+            <a href="index.html">
+                <span class="pill-icon">💊</span> GhaniPharma
+            </a>
         </div>
         <div class="menu-btn" onclick="toggleMenu()">☰</div>
         <nav>
@@ -829,7 +1007,8 @@
                         <a href="examens.html"><i class="fas fa-clipboard-list"></i> Examens</a>
                     </div>
                 </li>
-                <li><a href="#questions"><i class="fas fa-question-circle"></i> Questions</a></li>
+                <!-- تغيير Questions إلى Contact -->
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -927,19 +1106,55 @@
                 </div>
             </div>
             
-            <div id="questions" class="section">
-                <h2><i class="fas fa-question-circle"></i> Questions</h2>
+            <!-- قسم آراؤكم الجديد -->
+            <div id="opinions" class="section">
+                <h2><i class="fas fa-comments"></i> Vos Avis</h2>
+                <p>Découvrez ce que nos étudiants pensent de GhaniPharma. Vos retours nous aident à améliorer continuellement notre plateforme.</p>
+                <div class="cards-container">
+                    <div class="card">
+                        <!-- البطاقة فارغة تماماً بدون أي محتوى -->
+                    </div>
+                    <div class="card">
+                        <!-- البطاقة فارغة تماماً بدون أي محتوى -->
+                    </div>
+                    <div class="card">
+                        <!-- البطاقة فارغة تماماً بدون أي محتوى -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- قسم الأخبار الجديد -->
+            <div id="news" class="section">
+                <h2><i class="fas fa-newspaper"></i> Dernières Nouvelles</h2>
+                <p>Restez informé des dernières actualités et mises à jour de GhaniPharma.</p>
+                <div class="cards-container">
+                    <div class="card">
+                        <!-- البطاقة فارغة تماماً بدون أي محتوى -->
+                    </div>
+                    <div class="card">
+                        <!-- البطاقة فارغة تماماً بدون أي محتوى -->
+                    </div>
+                    <div class="card">
+                        <!-- البطاقة فارغة تماماً بدون أي محتوى -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- تغيير قسم Questions إلى Contact -->
+            <div id="contact" class="section">
+                <h2><i class="fas fa-envelope"></i> Contact</h2>
                 <div class="about-container">
                     <div class="about-content">
                         <p>Vous avez une question, une suggestion ou vous souhaitez collaborer avec nous ?</p>
                         <p>N'hésitez pas à nous écrire sur nos réseaux sociaux :
+                        <a href="https://www.youtube.com/@Ghani-Rouabah">Youtube</a> ou
                         <a href="https://www.facebook.com/ghani.rouabah.2025">Facebook</a> ou
-                        <a href="https://www.tiktok.com/@ghanroub">Tiktok</a> ou
-                        <a href="https://www.instagram.com/ghani.rouabah/">Instagram</a>.</p>
+                        <a href="https://www.instagram.com/ghani.rouabah/">Instagram</a> ou
+                        <a href="https://www.tiktok.com/@ghani.rouabah">Tiktok</a>.</p>
                         <p>Nous vous répondrons dans les plus brefs délais. Merci de votre visite !</p>
                     </div>
                     <div class="about-image">
-                        <img src="https://raw.githubusercontent.com/ghanroub/pharmacie/refs/heads/main/ghanipharma2/Instant%20Messaging%20Market%20Key%20Players%20%26%20Trades%20Report%20to%202028.jpeg" alt="Questions GhaniPharma">
+                        <img src="https://raw.githubusercontent.com/ghanroub/pharmacie/refs/heads/main/ghanipharma2/Instant%20Messaging%20Market%20Key%20Players%20%26%20Trades%20Report%20to%202028.jpeg" alt="Contact GhaniPharma">
                     </div>
                 </div>
                 
@@ -979,10 +1194,43 @@
                     </form>
                 </div>
             </div>
+            
+            <!-- قسم شاهد أيضاً الجديد -->
+            <div id="watch-also" class="section">
+                <h2><i class="fas fa-eye"></i> À Voir Aussi</h2>
+                <p>Découvrez d'autres ressources et contenus qui pourraient vous intéresser.</p>
+                <div class="cards-container">
+                    <div class="card">
+                        <!-- البطاقة فارغة تماماً بدون أي محتوى -->
+                    </div>
+                    <div class="card">
+                        <!-- البطاقة فارغة تماماً بدون أي محتوى -->
+                    </div>
+                    <div class="card">
+                        <!-- البطاقة فارغة تماماً بدون أي محتوى -->
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <footer>
-        <p>&copy; 2025 GhaniPharma. Tous droits réservés</p>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.youtube.com/@Ghani-Rouabah" class="social-link youtube" target="_blank" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.facebook.com/ghani.rouabah.2025" class="social-link facebook" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/ghani.rouabah/" class="social-link instagram" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@ghani.rouabah" class="social-link tiktok" target="_blank" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            <p class="copyright">&copy; 2025 GhaniPharma. Tous droits réservés</p>
+        </div>
     </footer>
     <script>
         // إخفاء الهيدر تلقائياً عند التمرير لأسفل وإظهاره عند التمرير لأعلى
