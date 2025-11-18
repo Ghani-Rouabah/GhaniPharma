@@ -522,7 +522,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="resources-options">
-                        <button class="resource-btn pdf-btn">
+                        <button class="resource-btn pdf-btn" onclick="window.open('https://drive.google.com/file/d/1aWWeZm1CUV7swlHWkKhBv1yGEK2Wnozo/view?usp=sharing', '_blank'); event.stopPropagation();">
                             <i class="fas fa-file-pdf"></i> PDF
                         </button>
                         <button class="resource-btn video-btn">
@@ -541,7 +541,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="resources-options">
-                        <button class="resource-btn pdf-btn">
+                        <button class="resource-btn pdf-btn" onclick="window.open('https://drive.google.com/file/d/1aWWeZm1CUV7swlHWkKhBv1yGEK2Wnozo/view?usp=sharing', '_blank'); event.stopPropagation();">
                             <i class="fas fa-file-pdf"></i> PDF
                         </button>
                         <button class="resource-btn video-btn">
@@ -640,7 +640,8 @@
                                    this.classList.contains('video-btn') ? 'VIDÉO' : 'EXAMEN';
                 
                 if (resourceType !== 'EXAMEN') {
-                    alert(`Téléchargement du ${resourceType} pour: ${chapterTitle}`);
+                    // تم إزالة alert واستبداله بفتح الرابط مباشرة
+                    // alert(`Téléchargement du ${resourceType} pour: ${chapterTitle}`);
                     // هنا يمكنك إضافة الكود لتحميل الملف أو فتحه
                 }
             });
