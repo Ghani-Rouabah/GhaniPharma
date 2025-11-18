@@ -322,39 +322,62 @@
             border-bottom-color: #4dd0e1;
         }
         
-        /* أنماط جديدة لروابط الأخبار */
-        .news-links {
+        /* أنماط جديدة لقسم الأخبار المعدل */
+        .news-container {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .news-list {
             display: flex;
             flex-direction: column;
             gap: 15px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         
-        .news-link {
+        .news-item {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
             padding: 15px 20px;
             background: linear-gradient(135deg, rgba(0, 188, 212, 0.1), rgba(106, 27, 154, 0.1));
             border: 1px solid rgba(255, 235, 59, 0.2);
             border-radius: 10px;
+            transition: all 0.3s ease;
             color: #e0e0e0;
             text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
         }
         
-        .news-link:hover {
+        .news-item:hover {
             background: linear-gradient(135deg, rgba(0, 188, 212, 0.15), rgba(106, 27, 154, 0.15));
             transform: translateX(5px);
             border-color: rgba(255, 235, 59, 0.4);
             color: #fff;
         }
         
-        .news-link i {
+        .news-item i {
             color: #00bcd4;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             flex-shrink: 0;
+        }
+        
+        .news-item-content {
+            flex: 1;
+        }
+        
+        .news-more {
+            margin-top: 25px;
+            text-align: center;
+            padding: 15px;
+            background: linear-gradient(135deg, rgba(255, 235, 59, 0.1), rgba(0, 188, 212, 0.1));
+            border-radius: 10px;
+            border: 1px solid rgba(255, 235, 59, 0.2);
+        }
+        
+        .news-more p {
+            margin-bottom: 15px;
+            color: #e0e0e0;
+            font-size: 1.1rem;
         }
         
         /* باقي الأنماط تبقى كما هي */
@@ -853,28 +876,6 @@
             display: none;
         }
         
-        /* أنماط جديدة لقسم الأخبار */
-        .news-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        
-        .news-more {
-            margin-top: 25px;
-            text-align: center;
-            padding: 15px;
-            background: linear-gradient(135deg, rgba(255, 235, 59, 0.1), rgba(0, 188, 212, 0.1));
-            border-radius: 10px;
-            border: 1px solid rgba(255, 235, 59, 0.2);
-        }
-        
-        .news-more p {
-            margin-bottom: 15px;
-            color: #e0e0e0;
-            font-size: 1.1rem;
-        }
-        
         .contact-info {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1111,9 +1112,9 @@
             }
             
             /* تعديلات الهاتف لروابط الأخبار */
-            .news-link {
+            .news-item {
                 padding: 12px 15px;
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
         }
     </style>
@@ -1228,18 +1229,24 @@
             <div id="news" class="section">
                 <h2><i class="fas fa-newspaper"></i> Dernières Actualités</h2>
                 <div class="news-container">
-                    <div class="news-links">
-                        <a href="lien-vers-cours-biochimie-partie1" class="news-link">
-                            <i class="fas fa-book-medical"></i>
-                            il y a un cours en biochimie clinique : Prélèvements en Biochimie partie 1
+                    <div class="news-list">
+                        <a href="lien-vers-cours-biochimie-partie1" class="news-item">
+                            <i class="fas fa-book"></i>
+                            <div class="news-item-content">
+                                il y a un cours en biochimie clinique : Prélèvements en Biochimie partie 1
+                            </div>
                         </a>
-                        <a href="lien-vers-cours-biochimie-partie2" class="news-link">
-                            <i class="fas fa-book-medical"></i>
-                            il y a un cours en biochimie clinique : Prélèvements en Biochimie partie 2
+                        <a href="lien-vers-cours-biochimie-partie2" class="news-item">
+                            <i class="fas fa-book"></i>
+                            <div class="news-item-content">
+                                il y a un cours en biochimie clinique : Prélèvements en Biochimie partie 2
+                            </div>
                         </a>
-                        <a href="lien-vers-cours-immunologie" class="news-link">
-                            <i class="fas fa-book-medical"></i>
-                            il y a un cours en immunologie : introduction à l'immunologie
+                        <a href="lien-vers-cours-immunologie" class="news-item">
+                            <i class="fas fa-book"></i>
+                            <div class="news-item-content">
+                                il y a un cours en immunologie : introduction à l'immunologie
+                            </div>
                         </a>
                     </div>
                     <div class="news-more">
