@@ -816,44 +816,44 @@
             display: none;
         }
         
-        /* أنماط جديدة لقسم الأخبار */
+        /* أنماط جديدة لقسم الأخبار المعدل */
         .news-container {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
         }
         
         .news-item {
-            background: linear-gradient(135deg, rgba(0, 188, 212, 0.1), rgba(106, 27, 154, 0.1));
-            border: 1px solid rgba(255, 235, 59, 0.2);
-            border-radius: 10px;
-            padding: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
         }
         
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        
         .news-item:hover {
-            background: linear-gradient(135deg, rgba(0, 188, 212, 0.15), rgba(106, 27, 154, 0.15));
             transform: translateX(5px);
-            border-color: rgba(255, 235, 59, 0.4);
         }
         
-        .news-item h3 {
-            color: #ffeb3b;
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .news-item a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+            display: block;
         }
         
-        .news-item h3 i {
-            color: #00bcd4;
+        .news-item a:hover {
+            color: #4dd0e1;
         }
         
         .news-more {
             margin-top: 25px;
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             background: linear-gradient(135deg, rgba(255, 235, 59, 0.1), rgba(0, 188, 212, 0.1));
             border-radius: 10px;
             border: 1px solid rgba(255, 235, 59, 0.2);
@@ -1100,8 +1100,8 @@
                 grid-template-columns: 1fr;
             }
             
-            .news-item h3 {
-                font-size: 1.1rem;
+            .news-item a {
+                font-size: 1rem;
             }
         }
     </style>
@@ -1212,21 +1212,24 @@
                 </div>
             </div>
             
-            <!-- قسم الأخبار الجديد -->
+            <!-- قسم الأخبار المعدل -->
             <div id="news" class="section">
                 <h2><i class="fas fa-newspaper"></i> Dernières Actualités</h2>
                 <div class="news-container">
                     <div class="news-item">
-                        <h3><i class="fas fa-book-medical"></i> Nouveau cours disponible</h3>
-                        <p>il y a un cours en biochimie clinique : Prélèvements en Biochimie partie 1</p>
+                        <a href="lien_vers_cours_biochimie_partie1">
+                            il y a un cours en biochimie clinique : Prélèvements en Biochimie partie 1
+                        </a>
                     </div>
                     <div class="news-item">
-                        <h3><i class="fas fa-book-medical"></i> Nouveau cours disponible</h3>
-                        <p>il y a un cours en biochimie clinique : Prélèvements en Biochimie partie 2</p>
+                        <a href="lien_vers_cours_biochimie_partie2">
+                            il y a un cours en biochimie clinique : Prélèvements en Biochimie partie 2
+                        </a>
                     </div>
                     <div class="news-item">
-                        <h3><i class="fas fa-book-medical"></i> Nouveau cours disponible</h3>
-                        <p>il y a un cours en immunologie : introduction à l'immunologie</p>
+                        <a href="lien_vers_cours_immunologie">
+                            il y a un cours en immunologie : introduction à l'immunologie
+                        </a>
                     </div>
                     <div class="news-more">
                         <p>Pour plus de détails, n'oubliez pas de visiter nos sites sur :</p>
