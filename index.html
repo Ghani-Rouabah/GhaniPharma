@@ -31,12 +31,12 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            /* إضافة صورة الخلفية للجسم بدلاً de قسم hero -->
+            /* إضافة صورة الخلفية للجسم بدلاً de قسم hero */
             background: url('https://raw.githubusercontent.com/ghanroub/pharmacie/refs/heads/main/2Q%3D%3D.jpeg') no-repeat center center fixed;
             background-size: cover;
             position: relative;
         }
-        /* إضافة طبقة شبه شفافة فوق الخلفية لتحسين قراءة النص -->
+        /* إضافة طبقة شبه شفافة فوق الخلفية لتحسين قراءة النص */
         body::before {
             content: '';
             position: fixed;
@@ -102,7 +102,7 @@
             color: #fff;
         }
         
-        /* شعار كبسولة الدواء المحسن -->
+        /* شعار كبسولة الدواء المحسن */
         .logo a {
             color: #00bcd4;
             text-decoration: none;
@@ -252,7 +252,7 @@
             gap: 30px;
         }
         
-        /* تحسينات جديدة للأقسام -->
+        /* تحسينات جديدة للأقسام */
         .section {
             margin: 0;
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
@@ -267,7 +267,7 @@
             overflow: hidden;
         }
         
-        /* تعديل التدرج اللوني للحواف العلوية -->
+        /* تعديل التدرج اللوني للحواف العلوية */
         .section::before {
             content: '';
             position: absolute;
@@ -322,7 +322,7 @@
             border-bottom-color: #4dd0e1;
         }
         
-        /* أنماط جديدة لقسم À propos مع الصورة -->
+        /* أنماط جديدة لقسم À propos مع الصورة */
         .about-container {
             display: flex;
             align-items: center;
@@ -359,7 +359,7 @@
             flex: 1;
         }
         
-        /* أنماط جديدة لقسم الإحصائيات -->
+        /* أنماط جديدة لقسم الإحصائيات */
         .stats-section {
             margin: 0;
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
@@ -374,7 +374,7 @@
             overflow: hidden;
         }
         
-        /* تعديل التدرج اللوني للحواف العلوية -->
+        /* تعديل التدرج اللوني للحواف العلوية */
         .stats-section::before {
             content: '';
             position: absolute;
@@ -470,14 +470,14 @@
             font-weight: 600;
         }
         
-        /* تحسينات لنموذج الاتصال - تم إزالة الإطار -->
+        /* تحسينات لنموذج الاتصال - تم إزالة الإطار */
         .contact-form {
             margin-top: 25px;
-            padding: 0; /* تم إزالة padding -->
-            background: transparent; /* تم إزالة الخلفية -->
-            border-radius: 0; /* تم إزالة الزوايا المدورة -->
-            border: none; /* تم إزالة الحدود -->
-            box-shadow: none; /* تم إزالة الظلال -->
+            padding: 0; /* تم إزالة padding */
+            background: transparent; /* تم إزالة الخلفية */
+            border-radius: 0; /* تم إزالة الزوايا المدورة */
+            border: none; /* تم إزالة الحدود */
+            box-shadow: none; /* تم إزالة الظلال */
         }
         
         .contact-form h3 {
@@ -488,8 +488,8 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            background: transparent; /* تأكيد إزالة الخلفية -->
-            padding: 0; /* تأكيد إزالة padding -->
+            background: transparent; /* تأكيد إزالة الخلفية */
+            padding: 0; /* تأكيد إزالة padding */
         }
         
         .contact-form h3 i {
@@ -585,7 +585,7 @@
             flex: 1;
         }
         
-        /* رسائل الحالة -->
+        /* رسائل الحالة */
         .status-message {
             padding: 15px;
             border-radius: 8px;
@@ -608,7 +608,7 @@
             border: 1px solid #f44336;
         }
         
-        /* أنماط جديدة للفوتر -->
+        /* أنماط جديدة للفوتر */
         footer {
             background-color: rgba(0, 0, 0, 0.5);
             color: #ffeb3b;
@@ -688,7 +688,7 @@
             color: #e0e0e0;
         }
         
-        /* المعرض للهاتف - التصميم الأصلي -->
+        /* المعرض للهاتف - التصميم الأصلي */
         .gallery {
             position: relative;
             width: 100%;
@@ -712,7 +712,7 @@
             opacity: 1;
         }
         
-        /* المعرض الجديد للكمبيوتر فقط -->
+        /* المعرض الجديد للكمبيوتر فقط */
         @media (min-width: 769px) {
             .gallery {
                 height: 200px;
@@ -725,7 +725,7 @@
             
             .gallery-track {
                 display: flex;
-                animation: scroll 60s linear infinite; /* تم تغيير السرعة من 30s إلى 60s -->
+                animation: scroll 30s linear infinite;
                 width: max-content;
             }
             
@@ -760,13 +760,13 @@
                 animation-play-state: paused;
             }
             
-            /* سلوك القائمة المنسدلة في الكمبيوتر -->
+            /* سلوك القائمة المنسدلة في الكمبيوتر */
             .dropdown:hover .dropdown-content {
                 display: block;
                 animation: fadeIn 0.3s ease;
             }
 
-            /* إظهار Gmail وإخفاء Email في الكمبيوتر -->
+            /* إظهار Gmail وإخفاء Email في الكمبيوتر */
             .desktop-only {
                 display: inline !important;
             }
@@ -775,7 +775,7 @@
             }
         }
         
-        /* أنماط جديدة للأقسام المضافة -->
+        /* أنماط جديدة للأقسام المضافة */
         .cards-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -817,7 +817,7 @@
             border-color: rgba(255, 235, 59, 0.5);
         }
         
-        /* إزالة جميع المحتويات من البطاقات -->
+        /* إزالة جميع المحتويات من البطاقات */
         .card-icon,
         .card h3,
         .card p {
@@ -825,7 +825,7 @@
         }
         
         @media (max-width: 768px) {
-            /* تحسينات جديدة للمعرض على الهاتف -->
+            /* تحسينات جديدة للمعرض على الهاتف */
             .gallery {
                 height: 250px;
                 position: relative;
@@ -938,7 +938,7 @@
             footer p {
                 font-size: 0.9rem;
             }
-            /* تعديل القائمة المنسدلة في الهاتف -->
+            /* تعديل القائمة المنسدلة في الهاتف */
             .dropdown-content {
                 position: static;
                 width: 100%;
@@ -966,20 +966,20 @@
                 background-color: rgba(255, 255, 255, 0.2);
             }
             
-            /* تعديلات الهاتف للنموذج -->
+            /* تعديلات الهاتف للنموذج */
             .form-row {
                 flex-direction: column;
                 gap: 0;
             }
             .contact-form {
-                padding: 0; /* تم إزالة padding للهاتف أيضًا -->
+                padding: 0; /* تم إزالة padding للهاتف أيضًا */
             }
             .submit-btn {
                 padding: 12px 25px;
                 font-size: 1rem;
             }
             
-            /* تعديلات الهاتف للبطاقات -->
+            /* تعديلات الهاتف للبطاقات */
             .cards-container {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -990,7 +990,7 @@
                 min-height: 150px;
             }
             
-            /* تعديلات الهاتف للفوتر -->
+            /* تعديلات الهاتف للفوتر */
             .social-links {
                 gap: 15px;
             }
@@ -1001,7 +1001,7 @@
                 font-size: 1.3rem;
             }
 
-            /* إظهار Email وإخفاء Gmail في الهاتف -->
+            /* إظهار Email وإخفاء Gmail في الهاتف */
             .desktop-only {
                 display: none !important;
             }
@@ -1038,6 +1038,7 @@
             <div class="gallery">
                 <!-- للكمبيوتر: شريط متحرك -->
                 <div class="gallery-track">
+                    <!-- الصور الجديدة مرتبة كما طلبت -->
                     <img src="https://raw.githubusercontent.com/Ghani-Rouabah/GhaniPharma/refs/heads/main/GhaniPharma%20photo/ChatGPT%20Image%2010%20oct.%202025%2C%2022_46_50.png" alt="Image 1">
                     <img src="https://raw.githubusercontent.com/Ghani-Rouabah/GhaniPharma/refs/heads/main/GhaniPharma%20photo/The%20Human%20Body_%20A%20Comprehensive%20Guide%20to%20Body%20Parts%20Names.jpeg" alt="Image 2">
                     <img src="https://raw.githubusercontent.com/Ghani-Rouabah/GhaniPharma/refs/heads/main/GhaniPharma%20photo/t%C3%A9l%C3%A9chargement%20(3).jpeg" alt="Image 3">
@@ -1133,7 +1134,7 @@
                 <img src="https://raw.githubusercontent.com/Ghani-Rouabah/GhaniPharma/refs/heads/main/GhaniPharma%20photo/Inspiring%20Quotes%20on%20Mistakes%20and%20Learning%20for%20Personal%20Growth.jpeg" alt="Image 14">
                 <img src="https://raw.githubusercontent.com/Ghani-Rouabah/GhaniPharma/refs/heads/main/GhaniPharma%20photo/t%C3%A9l%C3%A9chargement%20(2).jpeg" alt="Image 15">
                 <img src="https://raw.githubusercontent.com/Ghani-Rouabah/GhaniPharma/refs/heads/main/GhaniPharma%20photo/Purple%20glass%20flask%20in%20blue%20research%20chemistry%20science%20banner%20laboratory%20background%20_%20Premium%20AI-generated%20image.jpeg" alt="Image 16">
-                <img src="https://raw.githubusercontent.com/Ghani-Rouabah/GhaniPharma/refs/heads/main/GhaniPharma%20photo/9%20%D0%9F%D1%80%D0%B8%D0%B7%D0%BD%D0%B0%D0%BA%D0%BE%D0%B2%20%D0%B4%D0%B5%D1%84%D0%B8%D1%86%D0%B8%D1%82%D0%B0%20%D0%BA%D0%B0%D0%BB%D1%8C%D1%86%D0%B8%D1%8F_%20%D0%A7%D1%82%D0%BE%20%D1%82%D0%B0%D0%BA%D0%BE%D0%B5%20%D0%B4%D0%B5%D1%84%D0%B8%D1%86%D0%B8%D1%82%20%D0%BA%D0%B0%D0%BB%D1%8C%D1%86%D0%B8%D1%8F_%20%D0%9A%D0%B0%D0%BA%D0%B8%D0%B5%20%D0%BF%D1%80%D0%B8%D0%B7%D0%BD%D0%B0%D0%BA%D0%B8%20%D0%B4%D0%B5%D1%84%D0%B8%D1%86%D0%B8%D1%82%D0%B0%20%D0%BA%D0%B0%D0%BB%D1%8C%D1%86%D0%B8%D1%8F_%20%D0%9A%D0%B0%D0%BA%20%D0%B2%D1%8B%20%D0%BC%D0%BE%D0%B6%D0%B5%D1%82%D0%B5%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%B4%D0%DO%D1%81%D1%82%D0%B0%D1%82%D0%BE%D1%87%D0%BD%D0%BE%20%D0%BA%D0%B0%D0%BB%D1%8C%D1%86%D0%B8%D1%8F_.jfif" alt="Image 17">
+                <img src="https://raw.githubusercontent.com/Ghani-Rouabah/GhaniPharma/refs/heads/main/GhaniPharma%20photo/9%20%D0%9F%D1%80%D0%B8%D0%B7%D0%BD%D0%B0%D0%BA%D0%BE%D0%B2%20%D0%B4%D0%B5%D1%84%D0%B8%D1%86%D0%B8%D1%82%D0%B0%20%D0%BA%D0%B0%D0%BB%D1%8C%D1%86%D0%B8%D1%8F_%20%D0%A7%D1%82%D0%BE%20%D1%82%D0%B0%D0%BA%D0%BE%D0%B5%20%D0%B4%D0%B5%D1%84%D0%B8%D1%86%D0%B8%D1%82%20%D0%BA%D0%B0%D0%BB%D1%8C%D1%86%D0%B8%D1%8F_%20%D0%9A%D0%B0%D0%BA%D0%B8%D0%B5%20%D0%BF%D1%80%D0%B8%D0%B7%D0%BD%D0%B0%D0%BA%D0%B8%20%D0%B4%D0%B5%D1%84%D0%B8%D1%86%D0%B8%D1%82%D0%B0%20%D0%BA%D0%B0%D0%BB%D1%8C%D1%86%D0%B8%D1%8F_%20%D0%9A%D0%B0%D0%BA%20%D0%B2%D1%8B%20%D0%BC%D0%BE%D0%B6%D0%B5%D1%82%D0%B5%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D1%82%D0%BE%D1%87%D0%BD%D0%BE%20%D0%BA%D0%B0%D0%BB%D1%8C%D1%86%D0%B8%D1%8F_.jfif" alt="Image 17">
                 <img src="https://raw.githubusercontent.com/Ghani-Rouabah/GhaniPharma/refs/heads/main/GhaniPharma%20photo/Cancer%20can%20be%20caused%20by%20reversible%20molecular%20changes%20%E2%80%93%20as%20new%20study%20shows%20%E2%80%94%20The%20Conversation%20Canada.jpeg" alt="Image 18">
                 <img src="https://raw.githubusercontent.com/ghanroub/pharmacie/refs/heads/main/ghanipharma2/download.jpg" alt="Image 19">
                 <img src="https://raw.githubusercontent.com/Ghani-Rouabah/GhaniPharma/refs/heads/main/GhaniPharma%20photo/ChatGPT%20Image%204%20oct.%202025%2C%2015_15_04.png" alt="Image 20">
@@ -1351,7 +1352,7 @@
                     galleryTrack.style.display = 'none';
                 }
                 
-                // تفعيل تبديل الصور للهاتف - تم تغيير الفاصل الزمني من 3000 إلى 5000 مللي ثانية
+                // تفعيل تبديل الصور للهاتف
                 const images = document.querySelectorAll('.gallery img:not(.gallery-track img)');
                 let currentIndex = 0;
                 
@@ -1363,7 +1364,7 @@
                 
                 if (images.length > 0) {
                     images[currentIndex].classList.add('active');
-                    setInterval(showNextImage, 5000); // تغيير من 3000 إلى 5000 مللي ثانية (5 ثوانٍ)
+                    setInterval(showNextImage, 3000);
                 }
             } else {
                 // إخفاء الصور الفردية في الكمبيوتر
