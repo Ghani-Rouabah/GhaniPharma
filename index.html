@@ -715,7 +715,7 @@
             
             .gallery-track {
                 display: flex;
-                animation: scroll 30s linear infinite;
+                animation: scroll 60s linear infinite; /* تم تغيير السرعة من 30s إلى 60s */
                 width: max-content;
             }
             
@@ -1314,7 +1314,7 @@
                     galleryTrack.style.display = 'none';
                 }
                 
-                // تفعيل تبديل الصور للهاتف
+                // تفعيل تبديل الصور للهاتف - تم تغيير الفاصل الزمني من 3000 إلى 5000 مللي ثانية
                 const images = document.querySelectorAll('.gallery img:not(.gallery-track img)');
                 let currentIndex = 0;
                 
@@ -1326,7 +1326,7 @@
                 
                 if (images.length > 0) {
                     images[currentIndex].classList.add('active');
-                    setInterval(showNextImage, 3000);
+                    setInterval(showNextImage, 5000); // تغيير من 3000 إلى 5000 مللي ثانية (5 ثوانٍ)
                 }
             } else {
                 // إخفاء الصور الفردية في الكمبيوتر
