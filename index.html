@@ -765,6 +765,14 @@
                 display: block;
                 animation: fadeIn 0.3s ease;
             }
+
+            /* إظهار Gmail وإخفاء Email في الكمبيوتر */
+            .desktop-only {
+                display: inline !important;
+            }
+            .mobile-only {
+                display: none !important;
+            }
         }
         
         /* أنماط جديدة للأقسام المضافة */
@@ -992,6 +1000,14 @@
                 height: 45px;
                 font-size: 1.3rem;
             }
+
+            /* إظهار Email وإخفاء Gmail في الهاتف */
+            .desktop-only {
+                display: none !important;
+            }
+            .mobile-only {
+                display: inline !important;
+            }
         }
     </style>
 </head>
@@ -1108,8 +1124,10 @@
                         <p>N'hésitez pas à nous contacter par :</p>
                         <p>
                             <a href="tel:+213123456789">Téléphone</a> | 
-                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ghanipharmadz@gmail.com&su=Contact%20GhaniPharma&body=Bonjour," target="_blank">Gmail</a> | 
-                            <a href="mailto:ghanipharmadz@gmail.com">Email</a> | 
+                            <!-- Gmail للكمبيوتر فقط -->
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ghanipharmadz@gmail.com&su=Contact%20GhaniPharma&body=Bonjour," target="_blank" class="desktop-only">Gmail</a>
+                            <!-- Email للهاتف فقط -->
+                            <a href="mailto:ghanipharmadz@gmail.com" class="mobile-only">Email</a> | 
                             <a href="https://wa.me/213123456789" target="_blank">WhatsApp</a> | 
                             <a href="https://t.me/ghani_rouabah" target="_blank">Telegram</a> | 
                             <a href="https://www.facebook.com/ghani.rouabah.2025" target="_blank">Facebook</a> | 
