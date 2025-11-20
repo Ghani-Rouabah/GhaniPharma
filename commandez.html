@@ -283,6 +283,13 @@
             text-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
         }
         
+        /* كلمة BaridyMob في الفقرة العلوية باللون الأبيض */
+        .baridy-text-top {
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+        
         /* معلومات الدفع - التصميم المحسن */
         .payment-info {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
@@ -304,8 +311,9 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #ff9800, #ffeb3b, #00bcd4, #ff9800);
-            background-size: 400% 100%;
+            /* التدرج بين لونين فقط كما طلبت */
+            background: linear-gradient(90deg, #ff9800, #ffeb3b);
+            background-size: 200% 100%;
             animation: shimmer 3s ease infinite;
         }
         
@@ -704,8 +712,8 @@
             <a href="https://eccp.poste.dz/" class="order-main-btn" target="_blank">
                 Commandez Vos Documents
             </a>
-            <!-- النص مع كلمة BaridyMob الملونة -->
-            <p>Choisissez vos documents et payez facilement par <span class="baridy-text">BaridyMob</span>.</p>
+            <!-- النص مع كلمة BaridyMob الملونة باللون الأبيض -->
+            <p>Choisissez vos documents et payez facilement par <span class="baridy-text-top">BaridyMob</span>.</p>
             
             <!-- معلومات الدفع المحسنة -->
             <div class="payment-info">
@@ -796,8 +804,20 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="offer-name">un seul vidéo + un seul PDF</td>
-                        <td class="price">50 DA</td>
+                        <td class="offer-name">Un seul PDF</td>
+                        <td class="price">20 DA</td>
+                    </tr>
+                    <tr>
+                        <td class="offer-name">Un seul vidéo</td>
+                        <td class="price">60 DA</td>
+                    </tr>
+                    <tr>
+                        <td class="offer-name">un seul PDF + un seul vidéo</td>
+                        <td class="price">70 DA</td>
+                    </tr>
+                    <tr>
+                        <td class="offer-name">Les examens</td>
+                        <td class="price">GRATUIT</td>
                     </tr>
                 </tbody>
             </table>
