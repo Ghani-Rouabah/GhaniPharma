@@ -276,43 +276,77 @@
             background: linear-gradient(135deg, #ff5722, #ff9800);
         }
         
-        /* معلومات الدفع */
+        /* كلمة BaridyMob الملونة */
+        .baridy-text {
+            color: #ff9800;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+        }
+        
+        /* معلومات الدفع - التصميم المحسن */
         .payment-info {
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            padding: 25px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+            border-radius: 15px;
+            padding: 30px;
             margin: 30px auto;
-            max-width: 600px;
+            max-width: 700px;
             text-align: center;
-            border: 1px solid rgba(255, 235, 59, 0.3);
+            border: 2px solid rgba(255, 235, 59, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .payment-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff9800, #ffeb3b, #00bcd4, #ff9800);
+            background-size: 400% 100%;
+            animation: shimmer 3s ease infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         
         .payment-info h3 {
             color: #ffeb3b;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
+            margin-bottom: 25px;
+            font-size: 1.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
         }
         
         .payment-details {
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            margin-bottom: 20px;
+            gap: 18px;
+            margin-bottom: 25px;
         }
         
         .payment-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 20px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
+            padding: 15px 25px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border-radius: 12px;
             transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .payment-item:hover {
-            background-color: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
         
         .payment-label {
@@ -320,17 +354,44 @@
             font-weight: bold;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            font-size: 1.1rem;
+        }
+        
+        .payment-label i {
+            color: #00bcd4;
+            font-size: 1.2rem;
+            width: 25px;
+            text-align: center;
         }
         
         .payment-value {
             color: white;
-            font-family: monospace;
-            font-size: 1.1rem;
-            background-color: rgba(0, 0, 0, 0.3);
-            padding: 5px 15px;
-            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.2rem;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 8px 18px;
+            border-radius: 8px;
             border: 1px solid rgba(255, 255, 255, 0.2);
+            letter-spacing: 1px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .payment-value:hover {
+            background: rgba(0, 0, 0, 0.6);
+            border-color: rgba(255, 235, 59, 0.4);
+        }
+        
+        .payment-instruction {
+            color: #ffeb3b;
+            font-style: italic;
+            margin: 15px 0 0 0;
+            font-size: 1.1rem;
+            padding: 12px;
+            background: rgba(255, 152, 0, 0.1);
+            border-radius: 8px;
+            border-left: 4px solid #ff9800;
         }
         
         /* تصميم الجداول المحسنة */
@@ -595,6 +656,10 @@
                 gap: 10px;
                 text-align: center;
             }
+            
+            .payment-label, .payment-value {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -639,11 +704,12 @@
             <a href="https://eccp.poste.dz/" class="order-main-btn" target="_blank">
                 Commandez Vos Documents
             </a>
-            <p>Choisissez vos documents et payez facilement par BaridyMob.</p>
+            <!-- النص مع كلمة BaridyMob الملونة -->
+            <p>Choisissez vos documents et payez facilement par <span class="baridy-text">BaridyMob</span>.</p>
             
-            <!-- معلومات الدفع المضافة -->
+            <!-- معلومات الدفع المحسنة -->
             <div class="payment-info">
-                <h3><i class="fas fa-money-bill-wave"></i> Informations de Paiement</h3>
+                <h3><i class="fas fa-credit-card"></i> Informations de Paiement</h3>
                 <div class="payment-details">
                     <div class="payment-item">
                         <span class="payment-label">
@@ -664,8 +730,8 @@
                         <span class="payment-value">79</span>
                     </div>
                 </div>
-                <p style="color: #ffeb3b; font-style: italic; margin: 0;">
-                    Utilisez ces informations pour effectuer votre paiement
+                <p class="payment-instruction">
+                    Utilisez ces informations pour effectuer votre paiement via <span class="baridy-text">BaridyMob</span>
                 </p>
             </div>
         </div>
