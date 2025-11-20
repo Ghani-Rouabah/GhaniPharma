@@ -236,23 +236,49 @@
                 1px 1px 0 #000;
             opacity: 0;
             animation: fadeIn 2s forwards;
-            animation-delay: 2s;
+            animation-delay: 1s;
         }
+        
+        /* تنسيق كلمة BaridyMob */
+        .baridymob {
+            color: #ff5722;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 87, 34, 0.5);
+            background: linear-gradient(135deg, #ff9800, #ff5722);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            padding: 2px 5px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .baridymob:hover {
+            transform: scale(1.05);
+            text-shadow: 0 0 15px rgba(255, 87, 34, 0.8);
+        }
+        
+        .baridymob::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(135deg, #ff9800, #ff5722);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .baridymob:hover::after {
+            transform: scaleX(1);
+        }
+        
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
-        }
-        .hero button {
-            background-color: #6a1b9a;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .hero button:hover {
-            background-color: #4a4a88;
         }
         .hero .container {
             padding: 20px;
@@ -288,21 +314,7 @@
             background: linear-gradient(135deg, #ff5722, #ff9800);
         }
         
-        /* كلمة BaridyMob الملونة */
-        .baridy-text {
-            color: #ff9800;
-            font-weight: bold;
-            text-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
-        }
-        
-        /* كلمة BaridyMob في الفقرة العلوية باللون الأبيض */
-        .baridy-text-top {
-            color: white;
-            font-weight: bold;
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-        }
-        
-        /* معلومات الدفع - التصميم المحسن */
+        /* تحسين قسم معلومات الدفع */
         .payment-info {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
             border-radius: 15px;
@@ -319,36 +331,51 @@
         .payment-info::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            /* التدرج بين لونين فقط كما طلبت */
-            background: linear-gradient(90deg, #ff9800, #ffeb3b);
-            background-size: 200% 100%;
-            animation: shimmer 3s ease infinite;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 235, 59, 0.1) 0%, transparent 70%);
+            animation: rotate 10s linear infinite;
+            z-index: 0;
         }
         
-        @keyframes shimmer {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .payment-info > * {
+            position: relative;
+            z-index: 1;
         }
         
         .payment-info h3 {
             color: #ffeb3b;
             margin-bottom: 25px;
-            font-size: 1.7rem;
+            font-size: 1.8rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 15px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .payment-info h3 i {
+            color: #4caf50;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
         
         .payment-details {
             display: flex;
             flex-direction: column;
-            gap: 18px;
+            gap: 20px;
             margin-bottom: 25px;
         }
         
@@ -361,12 +388,14 @@
             border-radius: 12px;
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
         }
         
         .payment-item:hover {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 235, 59, 0.3);
         }
         
         .payment-label {
@@ -379,39 +408,39 @@
         }
         
         .payment-label i {
-            color: #00bcd4;
-            font-size: 1.2rem;
-            width: 25px;
+            width: 20px;
             text-align: center;
+            color: #00bcd4;
         }
         
         .payment-value {
             color: white;
             font-family: 'Courier New', monospace;
             font-size: 1.2rem;
-            background: rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
             padding: 8px 18px;
             border-radius: 8px;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            letter-spacing: 1px;
-            font-weight: bold;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
+            font-weight: bold;
         }
         
         .payment-value:hover {
-            background: rgba(0, 0, 0, 0.6);
-            border-color: rgba(255, 235, 59, 0.4);
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+            border-color: rgba(255, 235, 59, 0.5);
+            transform: scale(1.02);
         }
         
-        .payment-instruction {
+        .payment-note {
             color: #ffeb3b;
             font-style: italic;
-            margin: 15px 0 0 0;
-            font-size: 1.1rem;
-            padding: 12px;
-            background: rgba(255, 152, 0, 0.1);
+            margin: 0;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.4);
             border-radius: 8px;
-            border-left: 4px solid #ff9800;
+            border-left: 4px solid #ff5722;
+            font-size: 1rem;
         }
         
         /* تصميم الجداول المحسنة */
@@ -497,61 +526,6 @@
             font-weight: bold;
             text-align: left;
             padding-left: 20px;
-        }
-        
-        /* أنماط جديدة للعناوين والفصول والمواد */
-        .section {
-            width: 100%;
-            max-width: 1200px;
-            margin-bottom: 30px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            padding: 20px;
-            color: #fff;
-        }
-        
-        .section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #ffeb3b;
-        }
-        
-        .section p {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-        
-        .section h3 {
-            font-size: 1.8rem;
-            margin: 25px 0 15px;
-            padding: 10px 15px;
-            color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        /* ألوان عناوين السنوات الدراسية */
-        #annee1 {
-            background: linear-gradient(135deg, #6a1b9a, #4a148c);
-        }
-        #annee2 {
-            background: linear-gradient(135deg, #4a148c, #3f51b5);
-        }
-        #annee3 {
-            background: linear-gradient(135deg, #3f51b5, #2196f3);
-        }
-        #annee4 {
-            background: linear-gradient(135deg, #2196f3, #00bcd4);
-        }
-        #annee5 {
-            background: linear-gradient(135deg, #00bcd4, #009688);
-        }
-        
-        .section h3:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
         
         /* تحسينات للفوتر مع مواقع التواصل الاجتماعي */
@@ -724,12 +698,30 @@
             /* تعديلات الهاتف لمعلومات الدفع */
             .payment-info {
                 padding: 20px 15px;
+                margin: 20px 15px;
             }
             
             .payment-item {
                 flex-direction: column;
-                gap: 10px;
+                gap: 12px;
                 text-align: center;
+                padding: 15px;
+            }
+            
+            .payment-label, .payment-value {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .payment-value {
+                font-size: 1.1rem;
+                padding: 10px 15px;
+            }
+            
+            .payment-info h3 {
+                font-size: 1.5rem;
+                flex-direction: column;
+                gap: 10px;
             }
         }
     </style>
@@ -775,8 +767,8 @@
             <a href="https://eccp.poste.dz/" class="order-main-btn" target="_blank">
                 Commandez Vos Documents
             </a>
-            <!-- النص مع كلمة BaridyMob الملونة باللون الأبيض -->
-            <p>Choisissez vos documents et payez facilement par <span class="baridy-text-top">BaridyMob</span>.</p>
+            <!-- تحسين النص مع إضافة تنسيق لـ BaridyMob -->
+            <p>Choisissez vos documents et payez facilement par <span class="baridymob">BaridyMob</span>.</p>
             
             <!-- معلومات الدفع المحسنة -->
             <div class="payment-info">
@@ -801,8 +793,8 @@
                         <span class="payment-value">79</span>
                     </div>
                 </div>
-                <p class="payment-instruction">
-                    Utilisez ces informations pour effectuer votre paiement via <span class="baridy-text">BaridyMob</span>
+                <p class="payment-note">
+                    <i class="fas fa-info-circle"></i> Utilisez ces informations pour effectuer votre paiement via <span class="baridymob">BaridyMob</span>
                 </p>
             </div>
         </div>
@@ -867,20 +859,8 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="offer-name">Un seul vidéo</td>
-                        <td class="price">30 DA</td>
-                    </tr>
-                    <tr>
-                        <td class="offer-name">Un seul PDF</td>
-                        <td class="price">20 DA</td>
-                    </tr>
-                    <tr>
-                        <td class="offer-name">Un vidéo + un PDF</td>
+                        <td class="offer-name">un seul vidéo + un seul PDF</td>
                         <td class="price">50 DA</td>
-                    </tr>
-                    <tr>
-                        <td class="offer-name">Tests d'évaluation</td>
-                        <td class="price">70 DA</td>
                     </tr>
                 </tbody>
             </table>
