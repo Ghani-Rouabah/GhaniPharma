@@ -1409,6 +1409,23 @@
                 contactForm.addEventListener('submit', async function(e) {
                     e.preventDefault();
                     
+                    // الحصول على قيمة البريد الإلكتروني
+                    const emailInput = document.getElementById('email');
+                    const emailValue = emailInput.value.trim();
+                    
+                    // التحقق من صحة البريد الإلكتروني - الشروط الجديدة
+                    if (!emailValue.includes('@')) {
+                        showStatus('❌ Erreur: L\'email doit contenir le symbole @', 'error');
+                        emailInput.focus();
+                        return;
+                    }
+                    
+                    if (emailValue.length < 6) {
+                        showStatus('❌ Erreur: L\'email doit contenir au moins 6 caractères', 'error');
+                        emailInput.focus();
+                        return;
+                    }
+                    
                     // تعطيل زر الإرسال أثناء المعالجة
                     submitBtn.disabled = true;
                     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
