@@ -286,7 +286,7 @@
             overflow: hidden;
         }
         
-        /* تعديل التدرج اللوني للحواف العلوية */
+        /* تعديل التدرج اللوني للحواف العلوية -->
         .section::before {
             content: '';
             position: absolute;
@@ -341,7 +341,7 @@
             border-bottom-color: #4dd0e1;
         }
         
-        /* أنماط جديدة لقسم À propos مع الصورة */
+        <!-- أنماط جديدة لقسم À propos مع الصورة -->
         .about-container {
             display: flex;
             align-items: center;
@@ -378,7 +378,7 @@
             flex: 1;
         }
         
-        /* أنماط جديدة لقسم الإحصائيات */
+        <!-- أنماط جديدة لقسم الإحصائيات -->
         .stats-section {
             margin: 0;
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
@@ -393,7 +393,7 @@
             overflow: hidden;
         }
         
-        /* تعديل التدرج اللوني للحواف العلوية */
+        <!-- تعديل التدرج اللوني للحواف العلوية -->
         .stats-section::before {
             content: '';
             position: absolute;
@@ -489,14 +489,14 @@
             font-weight: 600;
         }
         
-        /* تحسينات لنموذج الاتصال - تم إزالة الإطار */
+        <!-- تحسينات لنموذج الاتصال - تم إزالة الإطار -->
         .contact-form {
             margin-top: 25px;
-            padding: 0; /* تم إزالة padding */
-            background: transparent; /* تم إزالة الخلفية */
-            border-radius: 0; /* تم إزالة الزوايا المدورة */
-            border: none; /* تم إزالة الحدود */
-            box-shadow: none; /* تم إزالة الظلال */
+            padding: 0; <!-- تم إزالة padding -->
+            background: transparent; <!-- تم إزالة الخلفية -->
+            border-radius: 0; <!-- تم إزالة الزوايا المدورة -->
+            border: none; <!-- تم إزالة الحدود -->
+            box-shadow: none; <!-- تم إزالة الظلال -->
         }
         
         .contact-form h3 {
@@ -507,8 +507,8 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            background: transparent; /* تأكيد إزالة الخلفية */
-            padding: 0; /* تأكيد إزالة padding */
+            background: transparent; <!-- تأكيد إزالة الخلفية -->
+            padding: 0; <!-- تأكيد إزالة padding -->
         }
         
         .contact-form h3 i {
@@ -604,7 +604,7 @@
             flex: 1;
         }
         
-        /* رسائل الحالة */
+        <!-- رسائل الحالة -->
         .status-message {
             padding: 15px;
             border-radius: 8px;
@@ -627,7 +627,7 @@
             border: 1px solid #f44336;
         }
         
-        /* أنماط جديدة للفوتر */
+        <!-- أنماط جديدة للفوتر -->
         footer {
             background-color: rgba(0, 0, 0, 0.5);
             color: #ffeb3b;
@@ -707,7 +707,7 @@
             color: #e0e0e0;
         }
         
-        /* المعرض للهاتف - التصميم الأصلي */
+        <!-- المعرض للهاتف - التصميم الأصلي -->
         .gallery {
             position: relative;
             width: 100%;
@@ -731,7 +731,7 @@
             opacity: 1;
         }
         
-        /* المعرض الجديد للكمبيوتر فقط */
+        <!-- المعرض الجديد للكمبيوتر فقط -->
         @media (min-width: 769px) {
             .gallery {
                 height: 200px;
@@ -744,7 +744,7 @@
             
             .gallery-track {
                 display: flex;
-                animation: scroll 60s linear infinite; /* تم تغيير السرعة من 30s إلى 60s */
+                animation: scroll 60s linear infinite; <!-- تم تغيير السرعة من 30s إلى 60s -->
                 width: max-content;
             }
             
@@ -779,13 +779,13 @@
                 animation-play-state: paused;
             }
             
-            /* سلوك القائمة المنسدلة في الكمبيوتر */
+            <!-- سلوك القائمة المنسدلة في الكمبيوتر -->
             .dropdown:hover .dropdown-content {
                 display: block;
                 animation: fadeIn 0.3s ease;
             }
 
-            /* إظهار Gmail وإخفاء Email في الكمبيوتر */
+            <!-- إظهار Gmail وإخفاء Email في الكمبيوتر -->
             .desktop-only {
                 display: inline !important;
             }
@@ -794,7 +794,7 @@
             }
         }
         
-        /* أنماط جديدة للأقسام المضافة */
+        <!-- أنماط جديدة للأقسام المضافة -->
         .cards-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -836,7 +836,7 @@
             border-color: rgba(255, 235, 59, 0.5);
         }
         
-        /* إزالة جميع المحتويات من البطاقات */
+        <!-- إزالة جميع المحتويات من البطاقات -->
         .card-icon,
         .card h3,
         .card p {
@@ -844,7 +844,7 @@
         }
         
         @media (max-width: 768px) {
-            /* تحسينات جديدة للمعرض على الهاتف */
+            <!-- تحسينات جديدة للمعرض على الهاتف -->
             .gallery {
                 height: 250px;
                 position: relative;
@@ -957,7 +957,7 @@
             footer p {
                 font-size: 0.9rem;
             }
-            /* تعديل القائمة المنسدلة في الهاتف */
+            <!-- تعديل القائمة المنسدلة في الهاتف -->
             .dropdown-content {
                 position: static;
                 width: 100%;
@@ -985,20 +985,20 @@
                 background-color: rgba(255, 255, 255, 0.2);
             }
             
-            /* تعديلات الهاتف للنموذج */
+            <!-- تعديلات الهاتف للنموذج -->
             .form-row {
                 flex-direction: column;
                 gap: 0;
             }
             .contact-form {
-                padding: 0; /* تم إزالة padding للهاتف أيضًا */
+                padding: 0; <!-- تم إزالة padding للهاتف أيضًا -->
             }
             .submit-btn {
                 padding: 12px 25px;
                 font-size: 1rem;
             }
             
-            /* تعديلات الهاتف للبطاقات */
+            <!-- تعديلات الهاتف للبطاقات -->
             .cards-container {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -1009,7 +1009,7 @@
                 min-height: 150px;
             }
             
-            /* تعديلات الهاتف للفوتر */
+            <!-- تعديلات الهاتف للفوتر -->
             .social-links {
                 gap: 15px;
             }
@@ -1020,7 +1020,7 @@
                 font-size: 1.3rem;
             }
 
-            /* إظهار Email وإخفاء Gmail في الهاتف */
+            <!-- إظهار Email وإخفاء Gmail في الهاتف -->
             .desktop-only {
                 display: none !important;
             }
