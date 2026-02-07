@@ -352,7 +352,6 @@
         .option input {
             margin-right: 12px;
             transform: scale(1.2);
-            cursor: pointer;
         }
         
         .option label {
@@ -1044,23 +1043,9 @@
             
             // إضافة مستمعي الأحداث للخيارات
             document.querySelectorAll('.option').forEach(option => {
-                option.addEventListener('click', function(e) {
-                    // منع تنفيذ الحدث مرتين إذا تم النقر على المربع الصغير
-                    if (e.target.type === 'checkbox') {
-                        return;
-                    }
+                option.addEventListener('click', function() {
                     const questionId = this.getAttribute('data-question');
                     const optionId = this.getAttribute('data-option');
-                    toggleOption(questionId, optionId);
-                });
-            });
-
-            // إضافة مستمعي الأحداث لمربعات الاختيار مباشرة
-            document.querySelectorAll('.option input[type="checkbox"]').forEach(checkbox => {
-                checkbox.addEventListener('click', function(e) {
-                    e.stopPropagation(); // منع انتشار الحدث إلى العنصر الأب
-                    const questionId = this.id.split('_')[0];
-                    const optionId = this.id.split('_')[1];
                     toggleOption(questionId, optionId);
                 });
             });
@@ -1069,25 +1054,18 @@
         // تبديل اختيار الخيار
         function toggleOption(questionId, optionId) {
             const checkbox = document.getElementById(`${questionId}_${optionId}`);
+            const optionElement = checkbox.parentElement;
             
-            // تأكد من أن السؤال ID يبدأ بـ "q"
-            const fullQuestionId = questionId.startsWith('q') ? questionId : `q${questionId}`;
-            const checkboxId = `${fullQuestionId}_${optionId}`;
-            const correctCheckbox = document.getElementById(checkboxId);
+            checkbox.checked = !checkbox.checked;
             
-            if (correctCheckbox) {
-                correctCheckbox.checked = !correctCheckbox.checked;
-                const optionElement = correctCheckbox.parentElement;
-                
-                if (correctCheckbox.checked) {
-                    optionElement.classList.add('selected');
-                } else {
-                    optionElement.classList.remove('selected');
-                }
-                
-                // تحديث التقدم
-                updateProgress();
+            if (checkbox.checked) {
+                optionElement.classList.add('selected');
+            } else {
+                optionElement.classList.remove('selected');
             }
+            
+            // تحديث التقدم
+            updateProgress();
         }
 
         // جمع إجابات الطالب مباشرة من الواجهة
