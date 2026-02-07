@@ -815,13 +815,13 @@
         const questions = [
             {
                 id: 1,
-                text: "Concernant le Liquide Céphalorachidien (LCS), quelles affirmations sont vraies ?",
+                text: "Concernant le Liquide Céphalo-rachidien (LCS), quelles affirmations sont vraies ?",
                 correctAnswers: ["a", "c", "e"],
                 options: [
                     { id: "a", text: "Il est normalement stérile." },
-                    { id: "b", text: "Sa formule cellulaire normale est < 5 éléments/mm³ chez l'adulte." },
+                    { id: "b", text: "Il contient une grande quantité d'anticorps." },
                     { id: "c", text: "La présence d'un micro-organisme dans le LCS définit une méningite." },
-                    { id: "d", text: "Il contient normalement des protéines à concentration élevée." },
+                    { id: "d", text: "Il est situé entre les méninges et le tissu cérébral." },
                     { id: "e", text: "Sa formule cellulaire normale chez l'adulte est < 10 éléments/mm³." }
                 ]
             },
@@ -833,7 +833,7 @@
                     { id: "a", text: "Céphalées en casque." },
                     { id: "b", text: "Photophobie." },
                     { id: "c", text: "Raideur de la nuque." },
-                    { id: "d", text: "Dysurie." },
+                    { id: "d", text: "Douleur abdominale." },
                     { id: "e", text: "Signe de Kernig positif." }
                 ]
             },
@@ -842,8 +842,8 @@
                 text: "Parmi ces paires 'population / étiologie bactérienne la plus probable', lesquelles sont correctes ?",
                 correctAnswers: ["a", "b", "c", "d", "e"],
                 options: [
-                    { id: "a", text: "Nouveau-né : Streptococcus agalactiae (S.B)." },
-                    { id: "b", text: "Enfant de 2 ans : Hemophilus influenzae." },
+                    { id: "a", text: "Nouveau-né : Streptococcus agalactiae (S. B)." },
+                    { id: "b", text: "Enfant de 2 ans : Haemophilus influenzae." },
                     { id: "c", text: "Adulte jeune : Neisseria meningitidis." },
                     { id: "d", text: "Personne âgée : Listeria monocytogenes." },
                     { id: "e", text: "Patient neurochirurgical : Staphylococcus epidermidis." }
@@ -855,33 +855,33 @@
                 correctAnswers: ["a", "c", "e"],
                 options: [
                     { id: "a", text: "Mycobacterium tuberculosis." },
-                    { id: "b", text: "Streptococcus pneumoniae." },
+                    { id: "b", text: "Neisseria meningitidis." },
                     { id: "c", text: "Listeria monocytogenes (forme néonatale)." },
-                    { id: "d", text: "Neisseria meningitidis." },
+                    { id: "d", text: "Streptococcus pneumoniae." },
                     { id: "e", text: "Virus." }
                 ]
             },
             {
                 id: 5,
                 text: "Concernant la ponction lombaire et le transport du LCS, quelles sont les règles à respecter ?",
-                correctAnswers: ["a", "c"],
+                correctAnswers: ["a", "c", "e"],
                 options: [
-                    { id: "a", text: "Prélever au moins 2 tubes stériles." },
-                    { id: "b", text: "Le transport peut se faire à température ambiante sans délai." },
-                    { id: "c", text: "Le transport au labo doit se faire en moins de 20 minutes." },
-                    { id: "d", text: "Il faut congeler le LCS pour la PCR." },
-                    { id: "e", text: "Un seul tube est suffisant pour tous les examens." }
+                    { id: "a", text: "Prélever au moins 3 tubes stériles." },
+                    { id: "b", text: "Le tube N°1 est destiné à la biochimie." },
+                    { id: "c", text: "Le transport au labo doit se faire en moins de 30 minutes." },
+                    { id: "d", text: "Il faut systématiquement réfrigérer le LCS pendant le transport." },
+                    { id: "e", text: "Utiliser un milieu de transport (TGV) si le délai est long." }
                 ]
             },
             {
                 id: 6,
                 text: "Quelles caractéristiques du LCS à l'examen macroscopique sont évocatrices ?",
-                correctAnswers: ["a", "b", "c", "e"],
+                correctAnswers: ["a", "b", "e"],
                 options: [
                     { id: "a", text: "Liquide trouble : Méningite purulente." },
                     { id: "b", text: "Liquide xanthochromique : Hémorragie méningée ancienne." },
-                    { id: "c", text: "Liquide ictérique : Leptospirose." },
-                    { id: "d", text: "Liquide limpide : Exclut toute infection." },
+                    { id: "c", text: "Liquide sérique : Leptospirose." },
+                    { id: "d", text: "Liquide clair : Élimine une méningite bactérienne." },
                     { id: "e", text: "Liquide hématique : Ponction traumatique ou hémorragie." }
                 ]
             },
@@ -892,20 +892,20 @@
                 options: [
                     { id: "a", text: "Hypoglycorachie (< 2/3 de la glycémie)." },
                     { id: "b", text: "Hyperprotéinorachie (> 1 g/L)." },
-                    { id: "c", text: "Lactatorachie normale." },
-                    { id: "d", text: "Lactatorachie > 3.2 mmol/L." },
-                    { id: "e", text: "Glycorachie normale ou élevée." }
+                    { id: "c", text: "Chlorurorachie augmentée." },
+                    { id: "d", text: "Lactatorachie > 3,2 mmol/L." },
+                    { id: "e", text: "Glycorachie normale." }
                 ]
             },
             {
                 id: 8,
-                text: "Quels examens de diagnostic rapide (D.I) peuvent être réalisés sur le LCS ?",
+                text: "Quels examens de diagnostic rapide (J1) peuvent être réalisés sur le LCS ?",
                 correctAnswers: ["a", "b", "c", "e"],
                 options: [
                     { id: "a", text: "Numération cellulaire sur cellule de Nageotte." },
                     { id: "b", text: "Coloration de Gram." },
-                    { id: "c", text: "Recherche d'antigènes solubles (ex : méningocoque, pneumocoque)." },
-                    { id: "d", text: "Culture prolongée de 3 semaines." },
+                    { id: "c", text: "Recherche d'antigènes solubles (ex: méningocoque, pneumocoque)." },
+                    { id: "d", text: "Culture sur milieu de Löwenstein-Jensen." },
                     { id: "e", text: "PCR (Biologie moléculaire)." }
                 ]
             },
@@ -915,21 +915,21 @@
                 correctAnswers: ["a", "c", "e"],
                 options: [
                     { id: "a", text: "La coloration de Gram différencie les bactéries à Gram+ des Gram-." },
-                    { id: "b", text: "La coloration de Ziehl-Neelsen est le premier examen à faire." },
+                    { id: "b", text: "La coloration de Ziehl-Neelsen est systématiquement positive dans la méningite tuberculeuse." },
                     { id: "c", text: "La coloration au bleu de méthylène permet une étude cytologique qualitative." },
-                    { id: "d", text: "La centrifugation n'est jamais nécessaire." },
+                    { id: "d", text: "Un examen direct de Gram positif permet d'identifier l'espèce bactérienne." },
                     { id: "e", text: "La centrifugation du LCS est souvent nécessaire pour obtenir un culot à examiner." }
                 ]
             },
             {
                 id: 10,
-                text: "Quels milieux de culture sont adaptés pour l'ensemencement bactériologique d'un LCS suspect de méningite bactérienne ?",
+                text: "Quels milieux de culture sont adaptés pour l'ensemencement systématique d'un LCS suspect de méningite bactérienne ?",
                 correctAnswers: ["a", "c", "e"],
                 options: [
-                    { id: "a", text: "Gélose chocolat enrichie (type Polyvitex), incubée sous CO2." },
-                    { id: "b", text: "Milieu EMB." },
+                    { id: "a", text: "Gélose chocolat enrichie (type levinthal), incubée sous CO₂." },
+                    { id: "b", text: "Milieu de Löwenstein-Jensen." },
                     { id: "c", text: "Gélose au sang frais (Columbia sang), incubée en aérobie et/ou anaérobie." },
-                    { id: "d", text: "Gélose MacConkey." },
+                    { id: "d", text: "Milieu Chapman." },
                     { id: "e", text: "Bouillon cœur-cervelle." }
                 ]
             },
@@ -939,10 +939,10 @@
                 correctAnswers: ["a", "c"],
                 options: [
                     { id: "a", text: "Test de satellitisme autour d'un disque X et V." },
-                    { id: "b", text: "Catalase positive." },
+                    { id: "b", text: "Catalase négative." },
                     { id: "c", text: "Exigence en facteurs X (hémine) et V (NAD)." },
-                    { id: "d", text: "Mobile à 37°C." },
-                    { id: "e", text: "Hydrolyse de l'urée." }
+                    { id: "d", text: "Coloration de Gram : cocci à Gram positif." },
+                    { id: "e", text: "Hémolyse bêta sur gélose au sang." }
                 ]
             },
             {
@@ -950,11 +950,11 @@
                 text: "Quels éléments sont des critères d'identification de Listeria monocytogenes ?",
                 correctAnswers: ["a", "b", "d"],
                 options: [
-                    { id: "a", text: "Mobile à 22°C." },
+                    { id: "a", text: "Mobilité à 22°C." },
                     { id: "b", text: "Hydrolyse de l'esculine." },
                     { id: "c", text: "Catalase négative." },
                     { id: "d", text: "Test de CAMP positif." },
-                    { id: "e", text: "Production de pigment jaune." }
+                    { id: "e", text: "Hémolyse alpha." }
                 ]
             },
             {
@@ -963,10 +963,10 @@
                 correctAnswers: ["a", "b", "d"],
                 options: [
                     { id: "a", text: "Est obligatoire." },
-                    { id: "b", text: "Peut être tenté directement à partir du LCS purulent dès J1." },
-                    { id: "c", text: "Se fait uniquement sur milieu Mueller-Hinton standard." },
-                    { id: "d", text: "Pour H. influenzae, se fait sur milieu HTM." },
-                    { id: "e", text: "N'est pas nécessaire pour les bactéries sensibles aux bêta-lactamines." }
+                    { id: "b", text: "Peut être lancé directement à partir du LCS (suivant les j)." },
+                    { id: "c", text: "Utilise le milieu de Mueller-Hinton pour tous les germes." },
+                    { id: "d", text: "Pour H. influenzae, il se fait sur milieu HTM." },
+                    { id: "e", text: "N'a pas d'utilité clinique." }
                 ]
             },
             {
@@ -975,7 +975,7 @@
                 correctAnswers: ["a", "c", "d", "e"],
                 options: [
                     { id: "a", text: "Le LCS est typiquement à prédominance lymphocytaire." },
-                    { id: "b", text: "Le diagnostic direct par coloration de Ziehl-Neelsen est toujours positif." },
+                    { id: "b", text: "Elle s'accompagne systématiquement d'une hyperchlorurorachie." },
                     { id: "c", text: "Le diagnostic direct par coloration de Ziehl-Neelsen est souvent négatif (paucibacillaire)." },
                     { id: "d", text: "Le milieu de culture adapté est le milieu de Löwenstein-Jensen." },
                     { id: "e", text: "L'hypoglycorachie est un signe constant." }
@@ -987,9 +987,9 @@
                 correctAnswers: ["a", "c", "e"],
                 options: [
                     { id: "a", text: "Les premiers résultats urgents à communiquer sont la biochimie et l'examen microscopique direct." },
-                    { id: "b", text: "La culture est le seul examen nécessaire." },
+                    { id: "b", text: "Un examen direct de Gram négatif élimine une méningite bactérienne." },
                     { id: "c", text: "La PCR est utile en cas d'examen direct négatif ou de méningite décapitée." },
-                    { id: "d", text: "La recherche d'antigènes solubles doit être systématique pour tous les germes." },
+                    { id: "d", text: "La cytologie normale du LCS permet d'exclure formellement une infection." },
                     { id: "e", text: "La recherche d'antigènes solubles est guidée par l'âge du patient et l'examen direct." }
                 ]
             }
