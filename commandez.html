@@ -178,9 +178,9 @@
         /* قسم البطل - إزالة الخلفية لأنها الآن في body */
         .hero {
             color: #fff;
-            padding: 150px 20px 100px;
+            padding: 100px 20px 50px; /* تقليل padding العلوي والسفلي */
             text-align: center;
-            margin-top: 80px; /* تعديل ليكون أقل بعد حذف شريط السنوات */
+            margin-top: 60px; /* تقليل الهامش العلوي */
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -225,7 +225,7 @@
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
             padding: 20px;
-            margin: 20px auto;
+            margin: 15px auto; /* تقليل الهامش */
             max-width: 600px;
             border: 1px solid rgba(255, 235, 59, 0.3);
         }
@@ -264,7 +264,7 @@
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
             padding: 20px;
-            margin: 20px auto;
+            margin: 15px auto; /* تقليل الهامش */
             max-width: 600px;
             border: 1px solid rgba(255, 235, 59, 0.3);
         }
@@ -335,7 +335,7 @@
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 8px 20px rgba(255, 87, 34, 0.4);
-            margin: 40px 0;
+            margin: 30px 0 20px 0; /* تقليل الهامش العلوي */
             display: inline-block;
             text-decoration: none;
             opacity: 0;
@@ -471,7 +471,8 @@
             }
             
             .hero {
-                margin-top: 80px; /* تعديل الهوامش للهاتف */
+                margin-top: 60px; /* تقليل الهوامش للهاتف */
+                padding: 80px 20px 30px;
             }
             
             .hero h1 {
@@ -484,6 +485,7 @@
             .order-main-btn {
                 font-size: 1.2rem;
                 padding: 15px 30px;
+                margin: 20px 0 15px 0;
             }
             
             /* تعديلات الهاتف للفوتر */
@@ -499,7 +501,7 @@
             
             .payment-info, .offers-table {
                 padding: 15px;
-                margin: 15px;
+                margin: 10px;
             }
             
             .payment-item {
@@ -592,11 +594,6 @@
                 </table>
             </div>
         </div>
-        
-        <!-- زر الطلب الرئيسي في الأسفل - تم تعديل الرابط -->
-        <a href="https://play.google.com/store/apps/details?id=ru.bpc.mobilebank.bpc" class="order-main-btn" target="_blank">
-            Commandez maintenant
-        </a>
     </section>
     
     <footer>
@@ -658,8 +655,6 @@
                 navMenu.classList.remove("show");
             }
         });
-
-        // إزالة كود الأزرار والتمرير الخاص بالسنوات
     </script>
 </body>
 </html>
