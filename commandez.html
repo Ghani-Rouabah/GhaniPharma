@@ -175,14 +175,12 @@
             75% { transform: scale(1.15) rotate(-5deg); }
         }
         
-        /* قسم الأزرار الثابتة أسفل header - تم حذفها */
-        
         /* قسم البطل - إزالة الخلفية لأنها الآن في body */
         .hero {
             color: #fff;
             padding: 150px 20px 100px;
             text-align: center;
-            margin-top: 80px; /* تعويض للشريط العلوي الثابت */
+            margin-top: 80px; /* تعديل ليكون أقل بعد حذف شريط السنوات */
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -217,21 +215,9 @@
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             background-color: transparent;
             border: none;
-            width: 100%;
-        }
-        
-        /* حاوية الجداول الجديدة */
-        .tables-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            max-width: 1000px;
-            width: 100%;
-            margin: 0 auto;
         }
         
         /* معلومات الدفع */
@@ -239,10 +225,9 @@
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
             padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
             border: 1px solid rgba(255, 235, 59, 0.3);
-            flex: 1;
-            min-width: 300px;
-            max-width: 450px;
         }
         
         .payment-info h3 {
@@ -274,52 +259,49 @@
             color: white;
         }
         
-        /* جدول الأسعار الجديد */
-        .pricing-info {
+        /* جدول العروض الصغير */
+        .offers-table {
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
             padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
             border: 1px solid rgba(255, 235, 59, 0.3);
-            flex: 1;
-            min-width: 300px;
-            max-width: 450px;
         }
         
-        .pricing-info h3 {
+        .offers-table h3 {
             color: #ffeb3b;
             margin-bottom: 15px;
             font-size: 1.5rem;
+            text-align: center;
         }
         
-        .pricing-table {
+        .offers-table table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
         }
         
-        .pricing-table th {
+        .offers-table th {
+            background: linear-gradient(135deg, #4a148c, #3f51b5);
             color: white;
             padding: 15px;
             text-align: center;
             font-size: 1.1rem;
             font-weight: bold;
-            background: linear-gradient(135deg, #2196f3, #00bcd4);
         }
         
-        .pricing-table td {
+        .offers-table td {
             padding: 15px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
+            color: white;
         }
         
-        .pricing-table tr:last-child td {
+        .offers-table tr:last-child td {
             border-bottom: none;
         }
         
-        .pricing-table tr:hover {
+        .offers-table tr:hover {
             background-color: rgba(255, 255, 255, 0.05);
         }
         
@@ -488,24 +470,15 @@
                 background-color: rgba(255, 255, 255, 0.15);
             }
             
+            .hero {
+                margin-top: 80px; /* تعديل الهوامش للهاتف */
+            }
+            
             .hero h1 {
                 font-size: 2rem;
             }
             .hero p {
                 font-size: 1rem;
-            }
-            .hero {
-                margin-top: 80px; /* تعديل الهامش العلوي */
-            }
-            
-            .tables-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .payment-info, .pricing-info {
-                width: 100%;
-                max-width: 100%;
             }
             
             .order-main-btn {
@@ -524,7 +497,7 @@
                 font-size: 1.3rem;
             }
             
-            .payment-info, .pricing-info {
+            .payment-info, .offers-table {
                 padding: 15px;
                 margin: 15px;
             }
@@ -562,7 +535,6 @@
                 </ul>
             </nav>
         </header>
-        <!-- تم حذف قسم الأزرار الثابتة -->
     </div>
     
     <!-- قسم المحتوى الرئيسي -->
@@ -574,57 +546,52 @@
             </a>
             <p>Choisissez vos documents et payez facilement par BaridiMob.</p>
             
-            <!-- حاوية الجداول الجديدة -->
-            <div class="tables-container">
-                <!-- معلومات الدفع المضافة -->
-                <div class="payment-info">
-                    <h3>Informations de Paiement</h3>
-                    <div class="payment-details">
-                        <div class="payment-item">
-                            <span class="payment-label">RIP :</span>
-                            <span class="payment-value">00799999004007516212</span>
-                        </div>
-                        <div class="payment-item">
-                            <span class="payment-label">CCP :</span>
-                            <span class="payment-value">40075162</span>
-                        </div>
-                        <div class="payment-item">
-                            <span class="payment-label">Clé :</span>
-                            <span class="payment-value">79</span>
-                        </div>
-                        <div class="payment-item">
-                            <span class="payment-label">FLEXY :</span>
-                            <span class="payment-value">+213 555 12 34 56</span>
-                        </div>
+            <!-- معلومات الدفع المضافة -->
+            <div class="payment-info">
+                <h3>Informations de Paiement</h3>
+                <div class="payment-details">
+                    <div class="payment-item">
+                        <span class="payment-label">RIP :</span>
+                        <span class="payment-value">00799999004007516212</span>
+                    </div>
+                    <div class="payment-item">
+                        <span class="payment-label">CCP :</span>
+                        <span class="payment-value">40075162</span>
+                    </div>
+                    <div class="payment-item">
+                        <span class="payment-label">Clé :</span>
+                        <span class="payment-value">79</span>
+                    </div>
+                    <div class="payment-item">
+                        <span class="payment-label">FLEXY :</span>
+                        <span class="payment-value">0550-12-34-56</span>
                     </div>
                 </div>
-                
-                <!-- جدول الأسعار الجديد -->
-                <div class="pricing-info">
-                    <h3>Tarifs</h3>
-                    <table class="pricing-table">
-                        <thead>
-                            <tr>
-                                <th>Offre</th>
-                                <th>Prix</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="offer-name">Vidéo unique</td>
-                                <td class="price">50 DA</td>
-                            </tr>
-                            <tr>
-                                <td class="offer-name">Examens</td>
-                                <td class="free-price">Gratuit</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            </div>
+            
+            <!-- جدول العروض الصغير -->
+            <div class="offers-table">
+                <h3>Nos Offres</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Offre</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="offer-name">Vidéo unique</td>
+                            <td class="price">50 DA</td>
+                        </tr>
+                        <tr>
+                            <td class="offer-name">Examens</td>
+                            <td class="free-price">Gratuit</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-        
-        <!-- تم حذف جميع جداول السنوات -->
         
         <!-- زر الطلب الرئيسي في الأسفل - تم تعديل الرابط -->
         <a href="https://play.google.com/store/apps/details?id=ru.bpc.mobilebank.bpc" class="order-main-btn" target="_blank">
@@ -691,6 +658,8 @@
                 navMenu.classList.remove("show");
             }
         });
+
+        // إزالة كود الأزرار والتمرير الخاص بالسنوات
     </script>
 </body>
 </html>
