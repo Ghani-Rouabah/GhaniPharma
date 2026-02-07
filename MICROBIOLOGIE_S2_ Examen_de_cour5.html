@@ -1,1 +1,1368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMZ6GN3075"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-WMZ6GN3075');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K8Z979C9');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM Microbiologie : EXAMEN CYTOBACTERIOLOGIQUE DU LIQUIDE CEREBROSPINAL - GhaniPharma</title>
+    <!-- إضافة Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            direction: ltr;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: url('https://raw.githubusercontent.com/ghanroub/pharmacie/refs/heads/main/2Q%3D%3D.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+        /* طبقة شبه شفافة فوق الخلفية */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: -1;
+        }
+        
+        /* الشريط العلوي */
+        .top-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease-in-out;
+        }
+        
+        .top-bar.hidden {
+            transform: translateY(-100%);
+        }
+        
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #ffeb3b;
+            padding: 20px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        /* زر القائمة في الهاتف */
+        .menu-btn {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #ffeb3b;
+            padding: 5px 10px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .menu-btn:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        /* قائمة التنقل الرئيسية */
+        header nav {
+            transform: translateX(-35px);
+        }
+        
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header nav ul li {
+            position: relative;
+        }
+        
+        header nav ul li a {
+            color: #ffeb3b;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        
+        header nav ul li a:hover {
+            color: #fff;
+        }
+        
+        /* تحسين شعار كبسولة الدواء */
+        .logo a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .logo a:hover::before {
+            left: 100%;
+        }
+        
+        .logo a:hover {
+            color: #0288d1;
+            background: rgba(0, 188, 212, 0.15);
+            transform: scale(1.05);
+            text-shadow: 0 0 8px rgba(0, 188, 212, 0.5);
+            box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+        }
+        
+        .pill-icon {
+            font-size: 1.8rem;
+            position: relative;
+            display: inline-block;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        
+        .logo a:hover .pill-icon {
+            animation: pillBounce 0.6s ease;
+            color: #ff4081;
+            text-shadow: 0 0 10px rgba(255, 64, 129, 0.7);
+        }
+        
+        @keyframes pillBounce {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            25% { transform: scale(1.2) rotate(-10deg); }
+            50% { transform: scale(1.1) rotate(10deg); }
+            75% { transform: scale(1.15) rotate(-5deg); }
+        }
+        
+        /* المحتوى الرئيسي */
+        .main-content {
+            margin-top: 140px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .exam-header {
+            text-align: center;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 900px;
+        }
+        
+        .exam-title {
+            font-size: 2.5rem;
+            color: #ffeb3b;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .exam-description {
+            font-size: 1.1rem;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+            line-height: 1.6;
+        }
+        
+        .exam-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 900px;
+        }
+        
+        .exam-info {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .timer {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffeb3b;
+        }
+        
+        .progress {
+            font-size: 16px;
+            color: #ffeb3b;
+        }
+        
+        /* التغيير الرئيسي هنا: إزالة الحد الأقصى للارتفاع وجعل الأسئلة تظهر في مستطيل طويل */
+        .questions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            /* إزالة max-height وoverflow-y لتجنب التمرير الداخلي */
+            padding: 10px;
+            /* إضافة ارتفاع تلقائي للسماح بالتمرير الطبيعي للصفحة */
+            min-height: auto;
+            overflow: visible;
+        }
+        
+        /* تحسين تصميم الأسئلة البيضاء */
+        .question {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            border-left: 6px solid #4a6491;
+            /* جعل كل سؤال يأخذ المساحة التي يحتاجها */
+            flex-shrink: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .question:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .question::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #4a6491, #00bcd4);
+        }
+        
+        .question-number {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .question-number span {
+            background: linear-gradient(135deg, #4a6491, #00bcd4);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .question-text {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+        
+        .options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        @media (max-width: 768px) {
+            .options {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid #e0e0e0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .option:hover {
+            background-color: #f0f8ff;
+            transform: translateX(5px);
+            border-color: #b3d9ff;
+        }
+        
+        .option.selected {
+            background-color: #e3f2fd;
+            border-color: #2196f3;
+            box-shadow: 0 4px 8px rgba(33, 150, 243, 0.2);
+        }
+        
+        .option input {
+            margin-right: 12px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        
+        .option label {
+            cursor: pointer;
+            flex-grow: 1;
+            font-size: 16px;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .actions {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 15px;
+        }
+        
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #submit-btn {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+        }
+        
+        #submit-btn:hover {
+            background: linear-gradient(135deg, #218838, #1ea085);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(40, 167, 69, 0.4);
+        }
+        
+        #reset-btn {
+            background: linear-gradient(135deg, #6c757d, #5a6268);
+            color: white;
+            box-shadow: 0 4px 10px rgba(108, 117, 125, 0.3);
+        }
+        
+        #reset-btn:hover {
+            background: linear-gradient(135deg, #5a6268, #4a5056);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(108, 117, 125, 0.4);
+        }
+        
+        .result-container {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .result-header {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .score {
+            font-size: 72px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 20px 0;
+        }
+        
+        .score-text {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        
+        .feedback {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        .feedback h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .question-result {
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #e1e8ff;
+        }
+        
+        .question-result.correct {
+            background-color: #e8f7ef;
+            border-color: #b8e6c9;
+        }
+        
+        .question-result.partial {
+            background-color: #fff8e8;
+            border-color: #ffdd99;
+        }
+        
+        .question-result.wrong {
+            background-color: #ffe8e8;
+            border-color: #ffb8b8;
+        }
+        
+        .question-result-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .result-details {
+            font-size: 0.95rem;
+            color: #555;
+        }
+        
+        .correct-answers {
+            color: #2d8a4a;
+            font-weight: bold;
+        }
+        
+        .student-answers {
+            color: #4a6fa5;
+            font-weight: bold;
+        }
+        
+        .note {
+            font-style: italic;
+            margin-top: 5px;
+            color: #777;
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            margin-left: 8px;
+        }
+        
+        .full-points {
+            background-color: #e8f7ef;
+        }
+        
+        .partial-points {
+            background-color: #fff8e8;
+        }
+        
+        .zero-points {
+            background-color: #ffe8e8;
+        }
+        
+        .restart-btn {
+            background: linear-gradient(135deg, #fdbb2d, #f7a900);
+            color: #2c3e50;
+            font-size: 18px;
+            padding: 15px 30px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(253, 187, 45, 0.3);
+        }
+        
+        .restart-btn:hover {
+            background: linear-gradient(135deg, #f7a900, #e69a00);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(253, 187, 45, 0.4);
+        }
+        
+        /* تحسينات للفوتر مع مواقع التواصل الاجتماعي */
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #ffeb3b;
+            text-align: center;
+            padding: 30px 15px;
+            width: 100%;
+            margin-top: auto;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255, 235, 59, 0.2), rgba(0, 188, 212, 0.2));
+            color: #ffeb3b;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: 1px solid rgba(255, 235, 59, 0.3);
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            background: linear-gradient(135deg, rgba(255, 235, 59, 0.3), rgba(0, 188, 212, 0.3));
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+        
+        .social-link.whatsapp:hover {
+            color: #25d366;
+            border-color: #25d366;
+        }
+        
+        .social-link.telegram:hover {
+            color: #0088cc;
+            border-color: #0088cc;
+        }
+        
+        .social-link.facebook:hover {
+            color: #1877f2;
+            border-color: #1877f2;
+        }
+        
+        .social-link.instagram:hover {
+            color: #e4405f;
+            border-color: #e4405f;
+        }
+        
+        .social-link.tiktok:hover {
+            color: #69c9d0;
+            border-color: #69c9d0;
+        }
+        
+        .social-link.youtube:hover {
+            color: #ff0000;
+            border-color: #ff0000;
+        }
+        
+        .copyright {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #e0e0e0;
+        }
+        
+        /* تصميم القائمة في الهاتف */
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: block;
+            }
+            
+            header nav {
+                transform: none;
+            }
+            
+            header nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.95);
+                padding: 15px 0;
+                margin: 0;
+                align-items: center;
+                border-radius: 0 0 10px 10px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+                animation: fadeIn 0.3s ease;
+            }
+            
+            header nav ul.show {
+                display: flex;
+            }
+            
+            header nav ul li {
+                margin: 5px 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            header nav ul li a {
+                font-size: 1.2rem;
+                padding: 12px;
+                display: inline-block;
+                color: #ffeb3b;
+                transition: background-color 0.2s;
+            }
+            
+            header nav ul li a:hover {
+                background-color: rgba(255, 255, 255, 0.15);
+            }
+            
+            .exam-title {
+                font-size: 2rem;
+            }
+            
+            .main-content {
+                padding: 10px;
+                margin-top: 180px;
+            }
+            
+            /* إزالة الحد الأقصى للارتفاع في الهاتف أيضاً */
+            .questions-container {
+                max-height: none;
+                overflow: visible;
+            }
+            
+            /* تعديلات الهاتف للفوتر */
+            .social-links {
+                gap: 15px;
+            }
+            
+            .social-link {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8Z979C9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- الشريط العلوي والأزرار الثابتة -->
+    <div class="top-bar" id="mainHeader">
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <span class="pill-icon">💊</span> GhaniPharma
+                </a>
+            </div>
+            <div class="menu-btn" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="commandez.html"><i class="fas fa-shopping-cart"></i> Commandez</a></li>
+                    <li><a href="index.html#about"><i class="fas fa-info-circle"></i> À propos</a></li>
+                    <!-- تم تغيير Contenu à Modules مع رابط مباشر -->
+                    <li><a href="modules.html"><i class="fas fa-book"></i> Modules</a></li>
+                    <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <div class="exam-header">
+            <h1 class="exam-title">QCM Microbiologie : EXAMEN CYTOBACTERIOLOGIQUE DU LIQUIDE CEREBROSPINAL</h1>
+            <div class="exam-description">
+                QCM sur l'examen cyto-bactériologique du liquide céphalo-rachidien (LCR) - Méningites. L'examen se compose de 15 questions. Vous avez 45 minutes pour répondre à toutes les questions.
+            </div>
+        </div>
+        
+        <div class="exam-container">
+            <div class="exam-info">
+                <div class="timer">Temps restant: <span id="time">45:00</span></div>
+                <div class="progress">Questions: <span id="answered">0</span>/<span id="total-qs">15</span> répondues</div>
+            </div>
+            
+            <div class="exam-content">
+                <div class="questions-container" id="questions-container">
+                    <!-- سيتم ملء الأسئلة ديناميكيًا -->
+                </div>
+                
+                <div class="actions">
+                    <button id="submit-btn">Soumettre l'examen</button>
+                    <button id="reset-btn">Recommencer</button>
+                </div>
+            </div>
+            
+            <div class="result-container" id="result-container">
+                <h2 class="result-header">Résultats de l'examen</h2>
+                <div class="score" id="final-score">0/20</div>
+                <div class="score-text" id="score-text"></div>
+                
+                <div class="feedback" id="feedback">
+                    <!-- سيتم ملء التقييم ديناميكيًا -->
+                </div>
+                
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color full-points"></div>
+                        <span>Point complet (1,33)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color partial-points"></div>
+                        <span>Points partiels</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color zero-points"></div>
+                        <span>Zéro point</span>
+                    </div>
+                </div>
+                
+                <button class="restart-btn" id="restart-btn">Refaire l'examen</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://whatsapp.com/channel/0029Vb7Hh2E8fewxLyVJbh2c" class="social-link whatsapp" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://t.me/ghanipharma" class="social-link telegram" target="_blank" title="Telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a href="https://www.facebook.com/ghani.rouabah.2025" class="social-link facebook" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/ghani.rouabah/" class="social-link instagram" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@ghani.rouabah" class="social-link tiktok" target="_blank" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://www.youtube.com/@Ghani-Rouabah" class="social-link youtube" target="_blank" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <p class="copyright">&copy; 2025 GhaniPharma. Tous droits réservés</p>
+        </div>
+    </footer>
+    
+    <script>
+        // قاعدة البيانات: الأسئلة والإجابات الصحيحة
+        const questions = [
+            {
+                id: 1,
+                text: "Concernant le Liquide Céphalorachidien (LCS), quelles affirmations sont vraies ?",
+                correctAnswers: ["a", "c", "e"],
+                options: [
+                    { id: "a", text: "Il est normalement stérile." },
+                    { id: "b", text: "Sa formule cellulaire normale est < 5 éléments/mm³ chez l'adulte." },
+                    { id: "c", text: "La présence d'un micro-organisme dans le LCS définit une méningite." },
+                    { id: "d", text: "Il contient normalement des protéines à concentration élevée." },
+                    { id: "e", text: "Sa formule cellulaire normale chez l'adulte est < 10 éléments/mm³." }
+                ]
+            },
+            {
+                id: 2,
+                text: "Quels sont les signes cliniques évocateurs d'un syndrome méningé chez l'adulte ?",
+                correctAnswers: ["a", "b", "c", "e"],
+                options: [
+                    { id: "a", text: "Céphalées en casque." },
+                    { id: "b", text: "Photophobie." },
+                    { id: "c", text: "Raideur de la nuque." },
+                    { id: "d", text: "Dysurie." },
+                    { id: "e", text: "Signe de Kernig positif." }
+                ]
+            },
+            {
+                id: 3,
+                text: "Parmi ces paires 'population / étiologie bactérienne la plus probable', lesquelles sont correctes ?",
+                correctAnswers: ["a", "b", "c", "d", "e"],
+                options: [
+                    { id: "a", text: "Nouveau-né : Streptococcus agalactiae (S.B)." },
+                    { id: "b", text: "Enfant de 2 ans : Hemophilus influenzae." },
+                    { id: "c", text: "Adulte jeune : Neisseria meningitidis." },
+                    { id: "d", text: "Personne âgée : Listeria monocytogenes." },
+                    { id: "e", text: "Patient neurochirurgical : Staphylococcus epidermidis." }
+                ]
+            },
+            {
+                id: 4,
+                text: "Lors d'une méningite à liquide clair (lymphocytaire), quels germes doivent être évoqués ?",
+                correctAnswers: ["a", "c", "e"],
+                options: [
+                    { id: "a", text: "Mycobacterium tuberculosis." },
+                    { id: "b", text: "Streptococcus pneumoniae." },
+                    { id: "c", text: "Listeria monocytogenes (forme néonatale)." },
+                    { id: "d", text: "Neisseria meningitidis." },
+                    { id: "e", text: "Virus." }
+                ]
+            },
+            {
+                id: 5,
+                text: "Concernant la ponction lombaire et le transport du LCS, quelles sont les règles à respecter ?",
+                correctAnswers: ["a", "c"],
+                options: [
+                    { id: "a", text: "Prélever au moins 2 tubes stériles." },
+                    { id: "b", text: "Le transport peut se faire à température ambiante sans délai." },
+                    { id: "c", text: "Le transport au labo doit se faire en moins de 20 minutes." },
+                    { id: "d", text: "Il faut congeler le LCS pour la PCR." },
+                    { id: "e", text: "Un seul tube est suffisant pour tous les examens." }
+                ]
+            },
+            {
+                id: 6,
+                text: "Quelles caractéristiques du LCS à l'examen macroscopique sont évocatrices ?",
+                correctAnswers: ["a", "b", "c", "e"],
+                options: [
+                    { id: "a", text: "Liquide trouble : Méningite purulente." },
+                    { id: "b", text: "Liquide xanthochromique : Hémorragie méningée ancienne." },
+                    { id: "c", text: "Liquide ictérique : Leptospirose." },
+                    { id: "d", text: "Liquide limpide : Exclut toute infection." },
+                    { id: "e", text: "Liquide hématique : Ponction traumatique ou hémorragie." }
+                ]
+            },
+            {
+                id: 7,
+                text: "Quels paramètres biochimiques du LCS orientent vers une méningite bactérienne ?",
+                correctAnswers: ["a", "b", "d"],
+                options: [
+                    { id: "a", text: "Hypoglycorachie (< 2/3 de la glycémie)." },
+                    { id: "b", text: "Hyperprotéinorachie (> 1 g/L)." },
+                    { id: "c", text: "Lactatorachie normale." },
+                    { id: "d", text: "Lactatorachie > 3.2 mmol/L." },
+                    { id: "e", text: "Glycorachie normale ou élevée." }
+                ]
+            },
+            {
+                id: 8,
+                text: "Quels examens de diagnostic rapide (D.I) peuvent être réalisés sur le LCS ?",
+                correctAnswers: ["a", "b", "c", "e"],
+                options: [
+                    { id: "a", text: "Numération cellulaire sur cellule de Nageotte." },
+                    { id: "b", text: "Coloration de Gram." },
+                    { id: "c", text: "Recherche d'antigènes solubles (ex : méningocoque, pneumocoque)." },
+                    { id: "d", text: "Culture prolongée de 3 semaines." },
+                    { id: "e", text: "PCR (Biologie moléculaire)." }
+                ]
+            },
+            {
+                id: 9,
+                text: "Concernant l'examen microscopique et les colorations, lesquelles de ces affirmations sont exactes ?",
+                correctAnswers: ["a", "c", "e"],
+                options: [
+                    { id: "a", text: "La coloration de Gram différencie les bactéries à Gram+ des Gram-." },
+                    { id: "b", text: "La coloration de Ziehl-Neelsen est le premier examen à faire." },
+                    { id: "c", text: "La coloration au bleu de méthylène permet une étude cytologique qualitative." },
+                    { id: "d", text: "La centrifugation n'est jamais nécessaire." },
+                    { id: "e", text: "La centrifugation du LCS est souvent nécessaire pour obtenir un culot à examiner." }
+                ]
+            },
+            {
+                id: 10,
+                text: "Quels milieux de culture sont adaptés pour l'ensemencement bactériologique d'un LCS suspect de méningite bactérienne ?",
+                correctAnswers: ["a", "c", "e"],
+                options: [
+                    { id: "a", text: "Gélose chocolat enrichie (type Polyvitex), incubée sous CO2." },
+                    { id: "b", text: "Milieu EMB." },
+                    { id: "c", text: "Gélose au sang frais (Columbia sang), incubée en aérobie et/ou anaérobie." },
+                    { id: "d", text: "Gélose MacConkey." },
+                    { id: "e", text: "Bouillon cœur-cervelle." }
+                ]
+            },
+            {
+                id: 11,
+                text: "Quels tests sont caractéristiques pour identifier Haemophilus influenzae ?",
+                correctAnswers: ["a", "c"],
+                options: [
+                    { id: "a", text: "Test de satellitisme autour d'un disque X et V." },
+                    { id: "b", text: "Catalase positive." },
+                    { id: "c", text: "Exigence en facteurs X (hémine) et V (NAD)." },
+                    { id: "d", text: "Mobile à 37°C." },
+                    { id: "e", text: "Hydrolyse de l'urée." }
+                ]
+            },
+            {
+                id: 12,
+                text: "Quels éléments sont des critères d'identification de Listeria monocytogenes ?",
+                correctAnswers: ["a", "b", "d"],
+                options: [
+                    { id: "a", text: "Mobile à 22°C." },
+                    { id: "b", text: "Hydrolyse de l'esculine." },
+                    { id: "c", text: "Catalase négative." },
+                    { id: "d", text: "Test de CAMP positif." },
+                    { id: "e", text: "Production de pigment jaune." }
+                ]
+            },
+            {
+                id: 13,
+                text: "L'antibiogramme des bactéries isolées du LCS :",
+                correctAnswers: ["a", "b", "d"],
+                options: [
+                    { id: "a", text: "Est obligatoire." },
+                    { id: "b", text: "Peut être tenté directement à partir du LCS purulent dès J1." },
+                    { id: "c", text: "Se fait uniquement sur milieu Mueller-Hinton standard." },
+                    { id: "d", text: "Pour H. influenzae, se fait sur milieu HTM." },
+                    { id: "e", text: "N'est pas nécessaire pour les bactéries sensibles aux bêta-lactamines." }
+                ]
+            },
+            {
+                id: 14,
+                text: "Quelles affirmations concernant la méningite tuberculeuse sont correctes ?",
+                correctAnswers: ["a", "c", "d", "e"],
+                options: [
+                    { id: "a", text: "Le LCS est typiquement à prédominance lymphocytaire." },
+                    { id: "b", text: "Le diagnostic direct par coloration de Ziehl-Neelsen est toujours positif." },
+                    { id: "c", text: "Le diagnostic direct par coloration de Ziehl-Neelsen est souvent négatif (paucibacillaire)." },
+                    { id: "d", text: "Le milieu de culture adapté est le milieu de Löwenstein-Jensen." },
+                    { id: "e", text: "L'hypoglycorachie est un signe constant." }
+                ]
+            },
+            {
+                id: 15,
+                text: "Parmi ces affirmations sur la démarche diagnostique, lesquelles sont vraies ?",
+                correctAnswers: ["a", "c", "e"],
+                options: [
+                    { id: "a", text: "Les premiers résultats urgents à communiquer sont la biochimie et l'examen microscopique direct." },
+                    { id: "b", text: "La culture est le seul examen nécessaire." },
+                    { id: "c", text: "La PCR est utile en cas d'examen direct négatif ou de méningite décapitée." },
+                    { id: "d", text: "La recherche d'antigènes solubles doit être systématique pour tous les germes." },
+                    { id: "e", text: "La recherche d'antigènes solubles est guidée par l'âge du patient et l'examen direct." }
+                ]
+            }
+        ];
 
+        // المتغيرات العامة
+        const pointsPerQuestion = 20 / 15; // 1.33333333 نقطة لكل سؤال
+        let timeLeft = 45 * 60; // 45 دقيقة بالثواني
+        let timerInterval;
+
+        // تهيئة الامتحان
+        function initExam() {
+            displayAllQuestions();
+            updateProgress();
+            startTimer();
+            
+            // إضافة مستمعي الأحداث للأزرار
+            document.getElementById('submit-btn').addEventListener('click', submitExam);
+            document.getElementById('reset-btn').addEventListener('click', resetExam);
+            document.getElementById('restart-btn').addEventListener('click', restartExam);
+        }
+
+        // عرض جميع الأسئلة في صفحة واحدة
+        function displayAllQuestions() {
+            const container = document.getElementById('questions-container');
+            
+            let questionsHTML = '';
+            questions.forEach((question) => {
+                const questionId = `q${question.id}`;
+                
+                let optionsHTML = '';
+                question.options.forEach(option => {
+                    optionsHTML += `
+                        <div class="option" data-question="${questionId}" data-option="${option.id}">
+                            <input type="checkbox" id="${questionId}_${option.id}" value="${option.id}">
+                            <label for="${questionId}_${option.id}">${option.id}) ${option.text}</label>
+                        </div>
+                    `;
+                });
+                
+                questionsHTML += `
+                    <div class="question">
+                        <div class="question-number">Question <span>${question.id}</span></div>
+                        <div class="question-text">${question.text}</div>
+                        <div class="options">${optionsHTML}</div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = questionsHTML;
+            
+            // إضافة مستمعي الأحداث للخيارات
+            document.querySelectorAll('.option').forEach(option => {
+                option.addEventListener('click', function(e) {
+                    // منع تنفيذ الحدث مرتين إذا تم النقر على المربع الصغير
+                    if (e.target.type === 'checkbox') {
+                        return;
+                    }
+                    const questionId = this.getAttribute('data-question');
+                    const optionId = this.getAttribute('data-option');
+                    toggleOption(questionId, optionId);
+                });
+            });
+
+            // إضافة مستمعي الأحداث لمربعات الاختيار مباشرة
+            document.querySelectorAll('.option input[type="checkbox"]').forEach(checkbox => {
+                checkbox.addEventListener('click', function(e) {
+                    e.stopPropagation(); // منع انتشار الحدث إلى العنصر الأب
+                    const questionId = this.id.split('_')[0];
+                    const optionId = this.id.split('_')[1];
+                    toggleOption(questionId, optionId);
+                });
+            });
+        }
+
+        // تبديل اختيار الخيار
+        function toggleOption(questionId, optionId) {
+            const checkbox = document.getElementById(`${questionId}_${optionId}`);
+            
+            // تأكد من أن السؤال ID يبدأ بـ "q"
+            const fullQuestionId = questionId.startsWith('q') ? questionId : `q${questionId}`;
+            const checkboxId = `${fullQuestionId}_${optionId}`;
+            const correctCheckbox = document.getElementById(checkboxId);
+            
+            if (correctCheckbox) {
+                correctCheckbox.checked = !correctCheckbox.checked;
+                const optionElement = correctCheckbox.parentElement;
+                
+                if (correctCheckbox.checked) {
+                    optionElement.classList.add('selected');
+                } else {
+                    optionElement.classList.remove('selected');
+                }
+                
+                // تحديث التقدم
+                updateProgress();
+            }
+        }
+
+        // جمع إجابات الطالب مباشرة من الواجهة
+        function collectStudentAnswers() {
+            const userAnswers = {};
+            
+            questions.forEach(question => {
+                const questionId = `q${question.id}`;
+                const selectedOptions = [];
+                
+                // لكل خيار في هذا السؤال
+                question.options.forEach(option => {
+                    const checkbox = document.getElementById(`${questionId}_${option.id}`);
+                    if (checkbox && checkbox.checked) {
+                        selectedOptions.push(option.id);
+                    }
+                });
+                
+                userAnswers[questionId] = selectedOptions;
+            });
+            
+            return userAnswers;
+        }
+
+        // تحديث شريط التقدم
+        function updateProgress() {
+            const userAnswers = collectStudentAnswers();
+            const answeredCount = Object.keys(userAnswers).filter(qId => userAnswers[qId].length > 0).length;
+            document.getElementById('answered').textContent = answeredCount;
+            document.getElementById('total-qs').textContent = questions.length;
+        }
+
+        // بدء المؤقت
+        function startTimer() {
+            timerInterval = setInterval(function() {
+                timeLeft--;
+                
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                
+                document.getElementById('time').textContent = 
+                    `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    submitExam();
+                }
+            }, 1000);
+        }
+
+        // تصحيح الامتحان
+        function submitExam() {
+            clearInterval(timerInterval);
+            
+            // جمع الإجابات مباشرة من الواجهة
+            const userAnswers = collectStudentAnswers();
+            
+            let totalScore = 0;
+            const maxScore = 20; // مجموع 20 نقطة
+            const results = {};
+            
+            // تصحيح كل سؤال
+            questions.forEach(question => {
+                const questionId = `q${question.id}`;
+                const correctList = question.correctAnswers;
+                const studentList = userAnswers[questionId] || [];
+                
+                // إذا لم يختر الطالب أي إجابة
+                if (studentList.length === 0) {
+                    results[questionId] = {
+                        score: 0,
+                        correctChoices: correctList,
+                        studentChoices: studentList,
+                        note: 'Aucune réponse sélectionnée'
+                    };
+                    return;
+                }
+                
+                // التحقق من وجود أي إجابة خاطئة
+                let hasWrongAnswer = false;
+                for (const choice of studentList) {
+                    if (!correctList.includes(choice)) {
+                        hasWrongAnswer = true;
+                        break;
+                    }
+                }
+                
+                if (hasWrongAnswer) {
+                    // وجود إجابة خاطئة واحدة → صفر
+                    results[questionId] = {
+                        score: 0,
+                        correctChoices: correctList,
+                        studentChoices: studentList,
+                        note: 'Contient une mauvaise réponse'
+                    };
+                    return;
+                }
+                
+                // الآن نعلم أن جميع الإجابات المختارة صحيحة
+                // حساب عدد الإجابات الصحيحة المختارة
+                const correctSelected = studentList.length; // جميعها صحيحة لأننا تحققنا من ذلك
+                const totalCorrect = correctList.length;
+                
+                if (correctSelected === totalCorrect) {
+                    // اختار جميع الإجابات الصحيحة → النقطة كاملة (1.33333333)
+                    results[questionId] = {
+                        score: pointsPerQuestion,
+                        correctChoices: correctList,
+                        studentChoices: studentList,
+                        note: 'Réponse complète'
+                    };
+                    totalScore += pointsPerQuestion;
+                } else if (correctSelected === 0) {
+                    // لم يختر أي إجابة صحيحة
+                    results[questionId] = {
+                        score: 0,
+                        correctChoices: correctList,
+                        studentChoices: studentList,
+                        note: 'Aucune bonne réponse sélectionnée'
+                    };
+                } else {
+                    // نقاط جزئية
+                    const score = (correctSelected / totalCorrect) * pointsPerQuestion;
+                    results[questionId] = {
+                        score: parseFloat(score.toFixed(4)),
+                        correctChoices: correctList,
+                        studentChoices: studentList,
+                        note: `Partiel (${correctSelected}/${totalCorrect})`
+                    };
+                    totalScore += score;
+                }
+            });
+            
+            // عرض النتائج
+            displayResults(totalScore, maxScore, results);
+        }
+
+        // عرض النتائج
+        function displayResults(totalScore, maxScore, results) {
+            // حساب النسبة المئوية
+            const percentage = ((totalScore / maxScore) * 100).toFixed(2);
+            
+            // تحديث صندوق النتيجة
+            document.getElementById('final-score').textContent = `${totalScore.toFixed(2)}/${maxScore}`;
+            document.getElementById('score-text').textContent = getScoreMessage(percentage);
+            
+            // تحديث تفاصيل التصحيح
+            const feedback = document.getElementById('feedback');
+            let detailsHTML = '<h3>Détails de la correction:</h3>';
+            
+            questions.forEach(question => {
+                const questionId = `q${question.id}`;
+                const result = results[questionId];
+                let resultClass = '';
+                
+                if (Math.abs(result.score - pointsPerQuestion) < 0.001) {
+                    resultClass = 'correct';
+                } else if (result.score > 0) {
+                    resultClass = 'partial';
+                } else {
+                    resultClass = 'wrong';
+                }
+                
+                const studentChoicesText = result.studentChoices.length > 0 
+                    ? result.studentChoices.join(', ')
+                    : 'Aucune';
+                
+                detailsHTML += `
+                    <div class="question-result ${resultClass}">
+                        <div class="question-result-header">
+                            <span>Question ${question.id}</span>
+                            <span>${result.score.toFixed(4)} point</span>
+                        </div>
+                        <div class="result-details">
+                            <div>Réponses correctes: <span class="correct-answers">${result.correctChoices.join(', ')}</span></div>
+                            <div>Vos réponses: <span class="student-answers">${studentChoicesText}</span></div>
+                            <div class="note">${result.note}</div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            feedback.innerHTML = detailsHTML;
+            
+            // إخفاء قسم الأسئلة وإظهار قسم النتائج
+            document.querySelector('.exam-content').style.display = 'none';
+            document.querySelector('.exam-info').style.display = 'none';
+            document.getElementById('result-container').style.display = 'block';
+        }
+
+        // رسالة النتيجة
+        function getScoreMessage(percentage) {
+            if (percentage >= 90) {
+                return "Excellent! Maîtrise parfaite de l'examen du liquide céphalo-rachidien!";
+            } else if (percentage >= 80) {
+                return "Très bien! Excellentes connaissances en diagnostic des méningites!";
+            } else if (percentage >= 70) {
+                return "Bien! Bonnes connaissances sur le LCS et les méningites!";
+            } else if (percentage >= 60) {
+                return "Passable! Révision de l'examen du LCS recommandée!";
+            } else if (percentage >= 40) {
+                return "Faible! Étudiez davantage le diagnostic des méningites!";
+            } else {
+                return "Très faible! Travaillez plus la microbiologie du LCS!";
+            }
+        }
+
+        // إعادة تعيين الإجابات
+        function resetExam() {
+            // إلغاء تحديد جميع الخيارات
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            
+            // إزالة التحديد المرئي
+            document.querySelectorAll('.option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // تحديث التقدم
+            updateProgress();
+        }
+
+        // إعادة الامتحان
+        function restartExam() {
+            timeLeft = 45 * 60;
+            
+            // إعادة تعيين العرض
+            document.querySelector('.exam-content').style.display = 'block';
+            document.querySelector('.exam-info').style.display = 'flex';
+            document.getElementById('result-container').style.display = 'none';
+            
+            // إعادة تعيين الإجابات
+            resetExam();
+            
+            // إعادة بدء المؤقت
+            clearInterval(timerInterval);
+            startTimer();
+        }
+
+        // بدء الامتحان عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', initExam);
+
+        // إخفاء الهيدر تلقائياً عند التمرير لأسفل وإظهاره عند التمرير لأعلى
+        let lastScrollTop = 0;
+        const mainHeader = document.getElementById('mainHeader');
+        
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // التمرير لأسفل - إخفاء الهيدر
+                mainHeader.classList.add('hidden');
+            } else if (scrollTop < lastScrollTop) {
+                // التمرير لأعلى - إظهار الهيدر
+                mainHeader.classList.remove('hidden');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        // عرض/إخفاء القائمة الرئيسية في الهاتف
+        function toggleMenu() {
+            var navMenu = document.getElementById("navMenu");
+            navMenu.classList.toggle("show");
+        }
+
+        // إغلاق القائمة عند النقر خارجها
+        document.addEventListener('click', function(event) {
+            const navMenu = document.getElementById("navMenu");
+            const menuBtn = document.querySelector('.menu-btn');
+            if (!navMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+                navMenu.classList.remove("show");
+            }
+        });
+    </script>
+</body>
+</html>
