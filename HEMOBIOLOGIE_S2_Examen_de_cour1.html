@@ -353,6 +353,39 @@
             margin-right: 12px;
             transform: scale(1.2);
             cursor: pointer;
+            /* إخفاء الـ checkbox الأصلي */
+            opacity: 0;
+            position: absolute;
+        }
+        
+        /* تصميم checkbox مخصص */
+        .custom-checkbox {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: white;
+            position: relative;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        
+        .option.selected .custom-checkbox {
+            background-color: #2196f3;
+            border-color: #2196f3;
+        }
+        
+        .option.selected .custom-checkbox::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
         }
         
         .option label {
@@ -362,6 +395,8 @@
             color: #333;
             font-weight: 500;
             user-select: none;
+            display: flex;
+            align-items: center;
         }
         
         .actions {
@@ -1012,7 +1047,10 @@
                     optionsHTML += `
                         <div class="option" data-question="${questionId}" data-option="${option.id}">
                             <input type="checkbox" id="${questionId}_${option.id}" value="${option.id}">
-                            <label for="${questionId}_${option.id}">${option.id}) ${option.text}</label>
+                            <label for="${questionId}_${option.id}">
+                                <span class="custom-checkbox"></span>
+                                ${option.id}) ${option.text}
+                            </label>
                         </div>
                     `;
                 });
@@ -1028,47 +1066,29 @@
             
             container.innerHTML = questionsHTML;
             
-            // إضافة مستمعي الأحداث للخيارات - تم التعديل هنا
+            // إضافة مستمعي الأحداث للخيارات - النسخة المحسنة
             document.querySelectorAll('.option').forEach(option => {
                 option.addEventListener('click', function(e) {
-                    // إذا تم النقر مباشرة على الـ checkbox، لا نفعّل الحدث
-                    if (e.target.type === 'checkbox') {
-                        return;
+                    // فقط إذا لم يكن النقر على الـ checkbox الحقيقي
+                    if (e.target.type !== 'checkbox') {
+                        const checkbox = this.querySelector('input[type="checkbox"]');
+                        checkbox.checked = !checkbox.checked;
+                        updateCheckboxState(checkbox);
                     }
-                    
-                    const questionId = this.getAttribute('data-question');
-                    const optionId = this.getAttribute('data-option');
-                    toggleOption(questionId, optionId);
                 });
             });
             
-            // إضافة مستمع أحداث منفصل للـ checkboxes
+            // إضافة مستمع أحداث للـ checkboxes الحقيقية
             document.querySelectorAll('.option input[type="checkbox"]').forEach(checkbox => {
-                checkbox.addEventListener('click', function(e) {
-                    e.stopPropagation(); // منع انتشار الحدث
-                    const optionElement = this.closest('.option');
-                    const questionId = optionElement.getAttribute('data-question');
-                    const optionId = optionElement.getAttribute('data-option');
-                    
-                    // تحديث حالة التحديد المرئي
-                    if (this.checked) {
-                        optionElement.classList.add('selected');
-                    } else {
-                        optionElement.classList.remove('selected');
-                    }
-                    
-                    // تحديث التقدم
-                    updateProgress();
+                checkbox.addEventListener('change', function() {
+                    updateCheckboxState(this);
                 });
             });
         }
 
-        // تبديل اختيار الخيار
-        function toggleOption(questionId, optionId) {
-            const checkbox = document.getElementById(`${questionId}_${optionId}`);
-            const optionElement = checkbox.parentElement;
-            
-            checkbox.checked = !checkbox.checked;
+        // تحديث حالة الـ checkbox والتحديد المرئي
+        function updateCheckboxState(checkbox) {
+            const optionElement = checkbox.closest('.option');
             
             if (checkbox.checked) {
                 optionElement.classList.add('selected');
