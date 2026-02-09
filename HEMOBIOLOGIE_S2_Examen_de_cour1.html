@@ -352,6 +352,7 @@
         .option input {
             margin-right: 12px;
             transform: scale(1.2);
+            cursor: pointer;
         }
         
         .option label {
@@ -360,6 +361,7 @@
             font-size: 16px;
             color: #333;
             font-weight: 500;
+            user-select: none;
         }
         
         .actions {
@@ -1026,12 +1028,37 @@
             
             container.innerHTML = questionsHTML;
             
-            // إضافة مستمعي الأحداث للخيارات
+            // إضافة مستمعي الأحداث للخيارات - تم التعديل هنا
             document.querySelectorAll('.option').forEach(option => {
-                option.addEventListener('click', function() {
+                option.addEventListener('click', function(e) {
+                    // إذا تم النقر مباشرة على الـ checkbox، لا نفعّل الحدث
+                    if (e.target.type === 'checkbox') {
+                        return;
+                    }
+                    
                     const questionId = this.getAttribute('data-question');
                     const optionId = this.getAttribute('data-option');
                     toggleOption(questionId, optionId);
+                });
+            });
+            
+            // إضافة مستمع أحداث منفصل للـ checkboxes
+            document.querySelectorAll('.option input[type="checkbox"]').forEach(checkbox => {
+                checkbox.addEventListener('click', function(e) {
+                    e.stopPropagation(); // منع انتشار الحدث
+                    const optionElement = this.closest('.option');
+                    const questionId = optionElement.getAttribute('data-question');
+                    const optionId = optionElement.getAttribute('data-option');
+                    
+                    // تحديث حالة التحديد المرئي
+                    if (this.checked) {
+                        optionElement.classList.add('selected');
+                    } else {
+                        optionElement.classList.remove('selected');
+                    }
+                    
+                    // تحديث التقدم
+                    updateProgress();
                 });
             });
         }
