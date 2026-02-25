@@ -7,7 +7,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'G-WMZ6GN3075');
     </script>
     <!-- Google Tag Manager -->
@@ -105,10 +104,6 @@
             padding: 0;
         }
         
-        header nav ul li {
-            position: relative;
-        }
-        
         header nav ul li a {
             color: #ffeb3b;
             text-decoration: none;
@@ -161,10 +156,7 @@
         
         .pill-icon {
             font-size: 1.8rem;
-            position: relative;
-            display: inline-block;
             transition: all 0.3s ease;
-            transform-origin: center;
         }
         
         .logo a:hover .pill-icon {
@@ -180,12 +172,6 @@
             75% { transform: scale(1.15) rotate(-5deg); }
         }
         
-        /* قسم الأزرار الثابتة أسفل header - إزالة شريط السنوات */
-        .year-navigation {
-            display: none;
-        }
-        
-        /* المحتوى الرئيسي */
         .main-content {
             margin-top: 140px;
             padding: 20px;
@@ -233,7 +219,6 @@
             text-align: center;
         }
         
-        /* ===== تحسينات بطاقات الدروس ثلاثية الأبعاد ===== */
         .chapters-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -249,38 +234,24 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: pointer;
             color: #333;
-            box-shadow: 
-                0 5px 15px rgba(0, 0, 0, 0.1),
-                0 2px 5px rgba(0, 0, 0, 0.08),
-                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
             overflow: hidden;
             position: relative;
             transform-style: preserve-3d;
             transform: translateZ(0);
         }
         
-        /* تأثير ثلاثي الأبعاد عند التحويم */
         .chapter-card:hover {
-            transform: 
-                translateY(-8px) 
-                rotateX(5deg) 
-                rotateY(0deg) 
-                scale(1.03);
-            box-shadow: 
-                0 20px 40px rgba(106, 27, 154, 0.25),
-                0 10px 20px rgba(0, 0, 0, 0.15),
-                0 5px 10px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px) rotateX(5deg) scale(1.03);
+            box-shadow: 0 20px 40px rgba(106, 27, 154, 0.25), 0 10px 20px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.1);
             background: linear-gradient(145deg, #ffffff, #fafafa);
         }
         
         .chapter-card.active {
             transform: translateY(-5px);
-            box-shadow: 
-                0 15px 30px rgba(106, 27, 154, 0.2),
-                0 8px 16px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 30px rgba(106, 27, 154, 0.2), 0 8px 16px rgba(0, 0, 0, 0.1);
         }
         
-        /* شريط علوي مع تدرج لوني */
         .chapter-card::before {
             content: '';
             position: absolute;
@@ -293,7 +264,6 @@
             border-radius: 12px 12px 0 0;
         }
         
-        /* تأثير ثلاثي الأبعاد للجزء الداخلي */
         .chapter-content {
             padding: 20px 15px;
             position: relative;
@@ -313,7 +283,6 @@
             text-align: center;
         }
         
-        /* علامة GRATUIT ثلاثية الأبعاد */
         .free-badge {
             position: absolute;
             top: 10px;
@@ -324,9 +293,7 @@
             border-radius: 15px;
             font-size: 0.8rem;
             font-weight: bold;
-            box-shadow: 
-                0 4px 8px rgba(255, 82, 82, 0.3),
-                0 2px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(255, 82, 82, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
             z-index: 3;
             transform: translateZ(30px);
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -356,14 +323,8 @@
         }
         
         @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px) translateZ(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) translateZ(10px);
-            }
+            from { opacity: 0; transform: translateY(-10px) translateZ(10px); }
+            to { opacity: 1; transform: translateY(0) translateZ(10px); }
         }
         
         .chapter-card.active .resources-options {
@@ -371,7 +332,6 @@
             gap: 10px;
         }
         
-        /* أزرار الموارد ثلاثية الأبعاد */
         .resource-btn {
             flex: 1;
             padding: 12px 15px;
@@ -386,9 +346,7 @@
             gap: 8px;
             transition: all 0.3s ease;
             font-size: 0.9rem;
-            box-shadow: 
-                0 4px 8px rgba(0, 0, 0, 0.15),
-                0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
             transform-style: preserve-3d;
             transform: translateZ(5px);
             position: relative;
@@ -412,9 +370,7 @@
         
         .resource-btn:hover {
             transform: translateY(-3px) translateZ(10px) scale(1.05);
-            box-shadow: 
-                0 8px 16px rgba(0, 0, 0, 0.2),
-                0 4px 8px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15);
         }
         
         .pdf-btn {
@@ -432,7 +388,6 @@
             border: 1px solid rgba(46, 204, 113, 0.3);
         }
         
-        /* أنماط زر الامتحان النهائي */
         .module-exam-container {
             text-align: center;
             margin: 30px 0;
@@ -450,21 +405,16 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 
-                0 8px 20px rgba(155, 89, 182, 0.3),
-                0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 20px rgba(155, 89, 182, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2);
             transform-style: preserve-3d;
             transform: translateZ(0);
         }
         
         .module-exam-btn:hover {
             transform: translateY(-5px) scale(1.05) translateZ(10px);
-            box-shadow: 
-                0 15px 30px rgba(155, 89, 182, 0.4),
-                0 8px 16px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 15px 30px rgba(155, 89, 182, 0.4), 0 8px 16px rgba(0, 0, 0, 0.25);
         }
         
-        /* تحسينات للفوتر مع مواقع التواصل الاجتماعي */
         footer {
             background-color: rgba(0, 0, 0, 0.5);
             color: #ffeb3b;
@@ -508,35 +458,12 @@
             color: #fff;
         }
         
-        .social-link.whatsapp:hover {
-            color: #25d366;
-            border-color: #25d366;
-        }
-        
-        .social-link.telegram:hover {
-            color: #0088cc;
-            border-color: #0088cc;
-        }
-        
-        .social-link.facebook:hover {
-            color: #1877f2;
-            border-color: #1877f2;
-        }
-        
-        .social-link.instagram:hover {
-            color: #e4405f;
-            border-color: #e4405f;
-        }
-        
-        .social-link.tiktok:hover {
-            color: #69c9d0;
-            border-color: #69c9d0;
-        }
-        
-        .social-link.youtube:hover {
-            color: #ff0000;
-            border-color: #ff0000;
-        }
+        .social-link.whatsapp:hover { color: #25d366; border-color: #25d366; }
+        .social-link.telegram:hover { color: #0088cc; border-color: #0088cc; }
+        .social-link.facebook:hover { color: #1877f2; border-color: #1877f2; }
+        .social-link.instagram:hover { color: #e4405f; border-color: #e4405f; }
+        .social-link.tiktok:hover { color: #69c9d0; border-color: #69c9d0; }
+        .social-link.youtube:hover { color: #ff0000; border-color: #ff0000; }
         
         .copyright {
             margin-top: 15px;
@@ -544,16 +471,85 @@
             color: #e0e0e0;
         }
         
-        /* تصميم القائمة في الهاتف */
+        /* أنماط المودال */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+            backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 900px;
+            height: 85vh;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            animation: modalFadeIn 0.4s;
+        }
+        
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .modal-header h2 {
+            margin: 0;
+            color: #6a1b9a;
+            font-size: 1.5rem;
+        }
+        
+        .close-modal {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .close-modal:hover {
+            color: #6a1b9a;
+        }
+        
+        .modal-body {
+            flex: 1;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+        
+        .modal-body iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
         @media (max-width: 768px) {
-            .menu-btn {
-                display: block;
-            }
-            
-            header nav {
-                transform: none;
-            }
-            
+            .menu-btn { display: block; }
             header nav ul {
                 display: none;
                 flex-direction: column;
@@ -563,64 +559,19 @@
                 width: 100%;
                 background-color: rgba(0, 0, 0, 0.95);
                 padding: 15px 0;
-                margin: 0;
-                align-items: center;
                 border-radius: 0 0 10px 10px;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
                 animation: fadeIn 0.3s ease;
             }
-            
-            header nav ul.show {
-                display: flex;
-            }
-            
-            header nav ul li {
-                margin: 5px 0;
-                width: 100%;
-                text-align: center;
-            }
-            
-            header nav ul li a {
-                font-size: 1.2rem;
-                padding: 12px;
-                display: inline-block;
-                color: #ffeb3b;
-                transition: background-color 0.2s;
-            }
-            
-            header nav ul li a:hover {
-                background-color: rgba(255, 255, 255, 0.15);
-            }
-            
-            .course-title {
-                font-size: 2rem;
-            }
-            
-            .chapters-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .main-content {
-                padding: 10px;
-                margin-top: 180px;
-            }
-            
-            /* تعديلات الهاتف للفوتر */
-            .social-links {
-                gap: 15px;
-            }
-            
-            .social-link {
-                width: 45px;
-                height: 45px;
-                font-size: 1.3rem;
-            }
-            
-            .resource-btn {
-                padding: 10px 12px;
-                font-size: 0.85rem;
-            }
+            header nav ul.show { display: flex; }
+            header nav ul li { margin: 5px 0; width: 100%; text-align: center; }
+            header nav ul li a { font-size: 1.2rem; padding: 12px; display: inline-block; }
+            .course-title { font-size: 2rem; }
+            .chapters-grid { grid-template-columns: 1fr; gap: 20px; }
+            .main-content { padding: 10px; margin-top: 180px; }
+            .social-links { gap: 15px; }
+            .social-link { width: 45px; height: 45px; font-size: 1.3rem; }
+            .resource-btn { padding: 10px 12px; font-size: 0.85rem; }
+            .modal-content { width: 95%; height: 90vh; padding: 15px; }
         }
         
         @keyframes fadeIn {
@@ -631,10 +582,9 @@
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8Z979C9"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8Z979C9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <!-- الشريط العلوي والأزرار الثابتة -->
+    
     <div class="top-bar" id="mainHeader">
         <header>
             <div class="logo">
@@ -645,23 +595,18 @@
             <div class="menu-btn" onclick="toggleMenu()">☰</div>
             <nav>
                 <ul id="navMenu">
-                    <!-- تم تغيير الرابط هنا -->
                     <li><a href="commandez.html"><i class="fas fa-shopping-cart"></i> Commandez</a></li>
                     <li><a href="index.html#about"><i class="fas fa-info-circle"></i> À propos</a></li>
-                    <!-- تم تغيير Contenu إلى Modules مع رابط مباشر -->
                     <li><a href="modules.html"><i class="fas fa-book"></i> Modules</a></li>
-                    <!-- تغيير Questions إلى Contact -->
                     <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </nav>
         </header>
-        <!-- إزالة قسم الأزرار الثابتة (شريط السنوات) -->
     </div>
     
-    <!-- المحتوى الرئيسي -->
     <div class="main-content">
         <div class="course-header">
-            <h1 class="course-title">HEMOBIOLOGIE S1</h1>
+            <h1 class="course-title">HEMOBIOLOGIE S2</h1>
             <div class="course-description">
                 L'hémobiologie est la science qui étudie le sang dans ses aspects normaux et pathologiques. Elle englobe l'étude de la composition du sang, des cellules sanguines, de l'hématopoïèse et des organes hématopoïétiques, ainsi que des pathologies associées.
             </div>
@@ -681,10 +626,10 @@
                         </div>
                     </div>
                     <div class="resources-options">
-                        <button class="resource-btn pdf-btn" onclick="window.open('https://drive.google.com/file/d/1R2NsIv08S-pEUGK9QTeBC0VK7-zc4OY7/view?usp=sharing', '_blank'); event.stopPropagation();">
+                        <button class="resource-btn pdf-btn" onclick="openPDF('1R2NsIv08S-pEUGK9QTeBC0VK7-zc4OY7', 'Les anomalies benignes de la lignee leucocytaire'); event.stopPropagation();">
                             <i class="fas fa-file-pdf"></i> PDF
                         </button>
-                        <button class="resource-btn video-btn" onclick="window.open('https://drive.google.com/file/d/1VeZhJ8jm_OG6huo1Q_Ep3q1dy7H7Q1KU/view?usp=sharing', '_blank'); event.stopPropagation();">
+                        <button class="resource-btn video-btn" onclick="openVideo('1VeZhJ8jm_OG6huo1Q_Ep3q1dy7H7Q1KU', 'Les anomalies benignes de la lignee leucocytaire (Vidéo)'); event.stopPropagation();">
                             <i class="fas fa-video"></i> VIDÉO
                         </button>
                         <button class="resource-btn exam-btn" onclick="window.location.href='HEMOBIOLOGIE_S2_Examen_de_cour1.html'">
@@ -693,9 +638,8 @@
                     </div>
                 </div>
             
-            <!-- الفصل 2 -->
+                <!-- الفصل 2 -->
                 <div class="chapter-card" onclick="toggleChapter(this)">
-                    
                     <div class="chapter-content">
                         <div class="chapter-title">
                             Leucémies aigues
@@ -703,10 +647,10 @@
                         </div>
                     </div>
                     <div class="resources-options">
-                        <button class="resource-btn pdf-btn" onclick="window.open('https://drive.google.com/file/d/1W_FH-Pb5TWmeQnroriNgbNMTjR51tQdw/view?usp=sharing', '_blank'); event.stopPropagation();">
+                        <button class="resource-btn pdf-btn" onclick="openPDF('1W_FH-Pb5TWmeQnroriNgbNMTjR51tQdw', 'Leucémies aigues'); event.stopPropagation();">
                             <i class="fas fa-file-pdf"></i> PDF
                         </button>
-                        <button class="resource-btn video-btn" onclick="window.open('https://drive.google.com/file/d/1Y9Y63GD5SqGhWr2or_rVOBSACcvsgTki/view?usp=sharing', '_blank'); event.stopPropagation();">
+                        <button class="resource-btn video-btn" onclick="openVideo('1Y9Y63GD5SqGhWr2or_rVOBSACcvsgTki', 'Leucémies aigues (Vidéo)'); event.stopPropagation();">
                             <i class="fas fa-video"></i> VIDÉO
                         </button>
                         <button class="resource-btn exam-btn" onclick="window.location.href='HEMOBIOLOGIE_S2_Examen_de_cour2.html'">
@@ -715,7 +659,7 @@
                     </div>
                 </div>
             
-            <!-- الفصل 3 -->
+                <!-- الفصل 3 -->
                 <div class="chapter-card" onclick="toggleChapter(this)">
                     <div class="chapter-content">
                         <div class="chapter-title">
@@ -724,10 +668,10 @@
                         </div>
                     </div>
                     <div class="resources-options">
-                        <button class="resource-btn pdf-btn" onclick="window.open('https://drive.google.com/file/d/1uQY5RnIYkgeQWWyyRIWNklFHqAUDJ1P-/view?usp=sharing', '_blank'); event.stopPropagation();">
+                        <button class="resource-btn pdf-btn" onclick="openPDF('1uQY5RnIYkgeQWWyyRIWNklFHqAUDJ1P-', 'La Leucémie Lymphoïde Chronique'); event.stopPropagation();">
                             <i class="fas fa-file-pdf"></i> PDF
                         </button>
-                        <button class="resource-btn video-btn" onclick="window.open('https://drive.google.com/file/d/1be-tzcFrhF7gSxXIL5R417RD5ZQEC5cH/view?usp=sharing', '_blank'); event.stopPropagation();">
+                        <button class="resource-btn video-btn" onclick="openVideo('1be-tzcFrhF7gSxXIL5R417RD5ZQEC5cH', 'La Leucémie Lymphoïde Chronique (Vidéo)'); event.stopPropagation();">
                             <i class="fas fa-video"></i> VIDÉO
                         </button>
                         <button class="resource-btn exam-btn" onclick="window.location.href='HEMOBIOLOGIE_S2_Examen_de_cour3.html'">
@@ -746,58 +690,51 @@
         </div>
     </div>
     
+    <!-- المودال الموحد لعرض PDF والفيديو -->
+    <div id="resourceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Prévisualisation</h2>
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <iframe id="resourceFrame" src="" title="Aperçu"></iframe>
+            </div>
+        </div>
+    </div>
+    
     <footer>
         <div class="footer-content">
             <div class="social-links">
-                <a href="https://whatsapp.com/channel/0029Vb7Hh2E8fewxLyVJbh2c" class="social-link whatsapp" target="_blank" title="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://t.me/ghanipharma" class="social-link telegram" target="_blank" title="Telegram">
-                    <i class="fab fa-telegram-plane"></i>
-                </a>
-                <a href="https://www.facebook.com/ghani.rouabah.2025" class="social-link facebook" target="_blank" title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/ghani.rouabah/" class="social-link instagram" target="_blank" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.tiktok.com/@ghani.rouabah" class="social-link tiktok" target="_blank" title="TikTok">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="https://www.youtube.com/@Ghani-Rouabah" class="social-link youtube" target="_blank" title="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
+                <a href="https://whatsapp.com/channel/0029Vb7Hh2E8fewxLyVJbh2c" class="social-link whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://t.me/ghanipharma" class="social-link telegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://www.facebook.com/ghani.rouabah.2025" class="social-link facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/ghani.rouabah/" class="social-link instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@ghani.rouabah" class="social-link tiktok" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@Ghani-Rouabah" class="social-link youtube" target="_blank"><i class="fab fa-youtube"></i></a>
             </div>
             <p class="copyright">&copy; 2025 GhaniPharma. Tous droits réservés</p>
         </div>
     </footer>
     
     <script>
-        // إخفاء الهيدر تلقائياً عند التمرير لأسفل وإظهاره عند التمرير لأعلى
+        // إخفاء الهيدر عند التمرير
         let lastScrollTop = 0;
         const mainHeader = document.getElementById('mainHeader');
-        
         window.addEventListener('scroll', function() {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
             if (scrollTop > lastScrollTop && scrollTop > 100) {
-                // التمرير لأسفل - إخفاء الهيدر
                 mainHeader.classList.add('hidden');
             } else if (scrollTop < lastScrollTop) {
-                // التمرير لأعلى - إظهار الهيدر
                 mainHeader.classList.remove('hidden');
             }
-            
             lastScrollTop = scrollTop;
         });
 
-        // عرض/إخفاء القائمة الرئيسية في الهاتف
         function toggleMenu() {
-            var navMenu = document.getElementById("navMenu");
-            navMenu.classList.toggle("show");
+            document.getElementById("navMenu").classList.toggle("show");
         }
 
-        // إغلاق القائمة عند النقر خارجها
         document.addEventListener('click', function(event) {
             const navMenu = document.getElementById("navMenu");
             const menuBtn = document.querySelector('.menu-btn');
@@ -806,41 +743,54 @@
             }
         });
         
-        // دالة لإظهار/إخفاء خيارات PDF و VIDEO
         function toggleChapter(element) {
-            // إغلاق جميع البطاقات الأخرى
             document.querySelectorAll('.chapter-card').forEach(card => {
-                if (card !== element) {
-                    card.classList.remove('active');
-                }
+                if (card !== element) card.classList.remove('active');
             });
-            
-            // تبديل حالة البطاقة المحددة
             element.classList.toggle('active');
         }
         
-        // إضافة مستمعي الأحداث لأزرار PDF و VIDEO
-        document.querySelectorAll('.resource-btn').forEach(button => {
-            button.addEventListener('click', function(event) {
-                event.stopPropagation(); // منع تنفيذ الحدث على البطاقة الأم
-                
-                const chapterTitle = this.closest('.chapter-card').querySelector('.chapter-title').textContent.trim();
-                const resourceType = this.classList.contains('pdf-btn') ? 'PDF' : 
-                                   this.classList.contains('video-btn') ? 'VIDÉO' : 'EXAMEN';
-                
-                if (resourceType !== 'EXAMEN') {
-                    // تم إزالة alert واستبداله بفتح الرابط مباشرة
-                }
-            });
-        });
+        // دوال عرض الموارد في المودال
+        function openPDF(fileId, title) {
+            openResource(fileId, title);
+        }
         
-        // إضافة تأثير عند تحميل الصفحة
+        function openVideo(fileId, title) {
+            openResource(fileId, title);
+        }
+        
+        function openResource(fileId, title) {
+            const modal = document.getElementById('resourceModal');
+            const iframe = document.getElementById('resourceFrame');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            modalTitle.textContent = title;
+            iframe.src = `https://drive.google.com/file/d/${fileId}/preview`;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('resourceModal');
+            const iframe = document.getElementById('resourceFrame');
+            modal.style.display = 'none';
+            iframe.src = '';
+            document.body.style.overflow = 'auto';
+        }
+        
+        window.onclick = function(event) {
+            const modal = document.getElementById('resourceModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+        
+        // تأثير ظهور البطاقات عند التحميل
         document.addEventListener('DOMContentLoaded', function() {
             const cards = document.querySelectorAll('.chapter-card');
             cards.forEach((card, index) => {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px) rotateX(10deg)';
-                
                 setTimeout(() => {
                     card.style.transition = 'opacity 0.5s ease, transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
                     card.style.opacity = '1';
