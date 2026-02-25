@@ -7,7 +7,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'G-WMZ6GN3075');
     </script>
     <!-- Google Tag Manager -->
@@ -40,7 +39,6 @@
             background-size: cover;
             position: relative;
         }
-        /* طبقة شبه شفافة فوق الخلفية */
         body::before {
             content: '';
             position: fixed;
@@ -52,7 +50,6 @@
             z-index: -1;
         }
         
-        /* الشريط العلوي */
         .top-bar {
             position: fixed;
             top: 0;
@@ -76,7 +73,6 @@
             align-items: center;
         }
         
-        /* زر القائمة في الهاتف */
         .menu-btn {
             display: none;
             font-size: 1.8rem;
@@ -92,7 +88,6 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
         
-        /* قائمة التنقل الرئيسية */
         header nav {
             transform: translateX(-35px);
         }
@@ -120,7 +115,6 @@
             color: #fff;
         }
         
-        /* تحسين شعار كبسولة الدواء */
         .logo a {
             color: #00bcd4;
             text-decoration: none;
@@ -180,12 +174,10 @@
             75% { transform: scale(1.15) rotate(-5deg); }
         }
         
-        /* قسم الأزرار الثابتة أسفل header - إزالة شريط السنوات */
         .year-navigation {
             display: none;
         }
         
-        /* المحتوى الرئيسي */
         .main-content {
             margin-top: 140px;
             padding: 20px;
@@ -233,7 +225,6 @@
             text-align: center;
         }
         
-        /* ===== تحسينات بطاقات الدروس ثلاثية الأبعاد ===== */
         .chapters-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -259,7 +250,6 @@
             transform: translateZ(0);
         }
         
-        /* تأثير ثلاثي الأبعاد عند التحويم */
         .chapter-card:hover {
             transform: 
                 translateY(-8px) 
@@ -280,7 +270,6 @@
                 0 8px 16px rgba(0, 0, 0, 0.1);
         }
         
-        /* شريط علوي مع تدرج لوني */
         .chapter-card::before {
             content: '';
             position: absolute;
@@ -293,7 +282,6 @@
             border-radius: 12px 12px 0 0;
         }
         
-        /* تأثير ثلاثي الأبعاد للجزء الداخلي */
         .chapter-content {
             padding: 20px 15px;
             position: relative;
@@ -313,7 +301,6 @@
             text-align: center;
         }
         
-        /* علامة GRATUIT ثلاثية الأبعاد */
         .free-badge {
             position: absolute;
             top: 10px;
@@ -371,7 +358,6 @@
             gap: 10px;
         }
         
-        /* أزرار الموارد ثلاثية الأبعاد */
         .resource-btn {
             flex: 1;
             padding: 12px 15px;
@@ -432,7 +418,6 @@
             border: 1px solid rgba(46, 204, 113, 0.3);
         }
         
-        /* أنماط زر الامتحان النهائي */
         .module-exam-container {
             text-align: center;
             margin: 30px 0;
@@ -464,7 +449,6 @@
                 0 8px 16px rgba(0, 0, 0, 0.25);
         }
         
-        /* تحسينات للفوتر مع مواقع التواصل الاجتماعي */
         footer {
             background-color: rgba(0, 0, 0, 0.5);
             color: #ffeb3b;
@@ -544,7 +528,83 @@
             color: #e0e0e0;
         }
         
-        /* تصميم القائمة في الهاتف */
+        /* أنماط المودال */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+            backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 900px;
+            height: 85vh;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            animation: modalFadeIn 0.4s;
+        }
+        
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .modal-header h2 {
+            margin: 0;
+            color: #6a1b9a;
+            font-size: 1.5rem;
+        }
+        
+        .close-modal {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .close-modal:hover {
+            color: #6a1b9a;
+        }
+        
+        .modal-body {
+            flex: 1;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+        
+        .modal-body iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
         @media (max-width: 768px) {
             .menu-btn {
                 display: block;
@@ -606,7 +666,6 @@
                 margin-top: 180px;
             }
             
-            /* تعديلات الهاتف للفوتر */
             .social-links {
                 gap: 15px;
             }
@@ -620,6 +679,12 @@
             .resource-btn {
                 padding: 10px 12px;
                 font-size: 0.85rem;
+            }
+
+            .modal-content {
+                width: 95%;
+                height: 90vh;
+                padding: 15px;
             }
         }
         
@@ -645,17 +710,13 @@
             <div class="menu-btn" onclick="toggleMenu()">☰</div>
             <nav>
                 <ul id="navMenu">
-                    <!-- تم تغيير الرابط هنا -->
                     <li><a href="commandez.html"><i class="fas fa-shopping-cart"></i> Commandez</a></li>
                     <li><a href="index.html#about"><i class="fas fa-info-circle"></i> À propos</a></li>
-                    <!-- تم تغيير Contenu إلى Modules مع رابط مباشر -->
                     <li><a href="modules.html"><i class="fas fa-book"></i> Modules</a></li>
-                    <!-- تغيير Questions إلى Contact -->
                     <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </nav>
         </header>
-        <!-- إزالة قسم الأزرار الثابتة (شريط السنوات) -->
     </div>
     
     <!-- المحتوى الرئيسي -->
@@ -681,10 +742,10 @@
                         </div>
                     </div>
                     <div class="resources-options">
-                        <button class="resource-btn pdf-btn" onclick="window.open('https://drive.google.com/file/d/1ZWRE0T5iN6o7G4w5P7f-mRi_6D1wf_8Z/view?usp=sharing', '_blank'); event.stopPropagation();">
+                        <button class="resource-btn pdf-btn" onclick="openPDF('1ZWRE0T5iN6o7G4w5P7f-mRi_6D1wf_8Z', 'Sang : composition et fonctions du sang'); event.stopPropagation();">
                             <i class="fas fa-file-pdf"></i> PDF
                         </button>
-                        <button class="resource-btn video-btn" onclick="window.open('https://drive.google.com/file/d/15Wdbf0xuBC5vdLmdK7zPy-nwlI5LYnlj/view?usp=sharing', '_blank'); event.stopPropagation();">
+                        <button class="resource-btn video-btn" onclick="openVideo('15Wdbf0xuBC5vdLmdK7zPy-nwlI5LYnlj', 'Sang : composition et fonctions du sang (Vidéo)'); event.stopPropagation();">
                             <i class="fas fa-video"></i> VIDÉO
                         </button>
                         <button class="resource-btn exam-btn" onclick="window.location.href='HEMOBIOLOGIE_S1_Examen_de_cour1.html'">
@@ -702,10 +763,10 @@
                         </div>
                     </div>
                     <div class="resources-options">
-                        <button class="resource-btn pdf-btn" onclick="window.open('https://drive.google.com/file/d/1dgSFonIl1x_KI6S30m0u5u66f0sAnzU2/view?usp=sharing', '_blank'); event.stopPropagation();">
+                        <button class="resource-btn pdf-btn" onclick="openPDF('1dgSFonIl1x_KI6S30m0u5u66f0sAnzU2', 'L\'hématopoïèse'); event.stopPropagation();">
                             <i class="fas fa-file-pdf"></i> PDF
                         </button>
-                        <button class="resource-btn video-btn" onclick="window.open('https://drive.google.com/file/d/1RgcE7_vTVZz4fDvHL1PVWjq2kzDQ5-6_/view?usp=sharing', '_blank'); event.stopPropagation();">
+                        <button class="resource-btn video-btn" onclick="openVideo('1RgcE7_vTVZz4fDvHL1PVWjq2kzDQ5-6_', 'L\'hématopoïèse (Vidéo)'); event.stopPropagation();">
                             <i class="fas fa-video"></i> VIDÉO
                         </button>
                         <button class="resource-btn exam-btn" onclick="window.location.href='HEMOBIOLOGIE_S1_Examen_de_cour2.html'">
@@ -723,10 +784,10 @@
                         </div>
                     </div>
                     <div class="resources-options">
-                        <button class="resource-btn pdf-btn" onclick="window.open('https://drive.google.com/file/d/1ZJej6NkH7W33IFPHvT5EMXnhl0o135Cx/view?usp=sharing', '_blank'); event.stopPropagation();">
+                        <button class="resource-btn pdf-btn" onclick="openPDF('1ZJej6NkH7W33IFPHvT5EMXnhl0o135Cx', 'Les organes hématopoïétiques'); event.stopPropagation();">
                             <i class="fas fa-file-pdf"></i> PDF
                         </button>
-                        <button class="resource-btn video-btn" onclick="window.open('https://drive.google.com/file/d/1FUlmNPDcqObtZdhLOwJoqe0BMk7RcT8b/view?usp=sharing', '_blank'); event.stopPropagation();">
+                        <button class="resource-btn video-btn" onclick="openVideo('1FUlmNPDcqObtZdhLOwJoqe0BMk7RcT8b', 'Les organes hématopoïétiques (Vidéo)'); event.stopPropagation();">
                             <i class="fas fa-video"></i> VIDÉO
                         </button>
                         <button class="resource-btn exam-btn" onclick="window.location.href='HEMOBIOLOGIE_S1_Examen_de_cour3.html'">
@@ -742,6 +803,19 @@
             <button class="module-exam-btn" onclick="window.location.href='Examen_Hemobiologie.html'">
                 <i class="fas fa-file-alt"></i> Examen de module
             </button>
+        </div>
+    </div>
+
+    <!-- المودال الموحد لعرض PDF والفيديو -->
+    <div id="resourceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Prévisualisation</h2>
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <iframe id="resourceFrame" src="" title="Aperçu"></iframe>
+            </div>
         </div>
     </div>
     
@@ -780,10 +854,8 @@
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             
             if (scrollTop > lastScrollTop && scrollTop > 100) {
-                // التمرير لأسفل - إخفاء الهيدر
                 mainHeader.classList.add('hidden');
             } else if (scrollTop < lastScrollTop) {
-                // التمرير لأعلى - إظهار الهيدر
                 mainHeader.classList.remove('hidden');
             }
             
@@ -807,33 +879,51 @@
         
         // دالة لإظهار/إخفاء خيارات PDF و VIDEO
         function toggleChapter(element) {
-            // إغلاق جميع البطاقات الأخرى
             document.querySelectorAll('.chapter-card').forEach(card => {
                 if (card !== element) {
                     card.classList.remove('active');
                 }
             });
-            
-            // تبديل حالة البطاقة المحددة
             element.classList.toggle('active');
         }
+
+        // دوال عرض الموارد في المودال
+        function openPDF(fileId, title) {
+            openResource(fileId, title);
+        }
         
-        // إضافة مستمعي الأحداث لأزرار PDF و VIDEO
-        document.querySelectorAll('.resource-btn').forEach(button => {
-            button.addEventListener('click', function(event) {
-                event.stopPropagation(); // منع تنفيذ الحدث على البطاقة الأم
-                
-                const chapterTitle = this.closest('.chapter-card').querySelector('.chapter-title').textContent.trim();
-                const resourceType = this.classList.contains('pdf-btn') ? 'PDF' : 
-                                   this.classList.contains('video-btn') ? 'VIDÉO' : 'EXAMEN';
-                
-                if (resourceType !== 'EXAMEN') {
-                    // تم إزالة alert واستبداله بفتح الرابط مباشرة
-                }
-            });
-        });
+        function openVideo(fileId, title) {
+            openResource(fileId, title);
+        }
         
-        // إضافة تأثير عند تحميل الصفحة
+        function openResource(fileId, title) {
+            const modal = document.getElementById('resourceModal');
+            const iframe = document.getElementById('resourceFrame');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            modalTitle.textContent = title;
+            iframe.src = `https://drive.google.com/file/d/${fileId}/preview`;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // منع التمرير في الخلفية
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('resourceModal');
+            const iframe = document.getElementById('resourceFrame');
+            modal.style.display = 'none';
+            iframe.src = ''; // إيقاف التحميل
+            document.body.style.overflow = 'auto'; // إعادة التمرير
+        }
+        
+        // إغلاق المودال عند النقر خارج المحتوى
+        window.onclick = function(event) {
+            const modal = document.getElementById('resourceModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+        
+        // تأثير ظهور البطاقات عند تحميل الصفحة
         document.addEventListener('DOMContentLoaded', function() {
             const cards = document.querySelectorAll('.chapter-card');
             cards.forEach((card, index) => {
