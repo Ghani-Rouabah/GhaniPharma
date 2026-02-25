@@ -19,9 +19,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cours BIOCHIMIE CLINIQUE S1 - GhaniPharma</title>
+    <!-- إضافة Font Awesome للأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* جميع الأنماط السابقة كما هي */
         * {
             box-sizing: border-box;
         }
@@ -543,8 +543,16 @@
             border: none;
         }
         
+        /* تصميم القائمة في الهاتف */
         @media (max-width: 768px) {
-            .menu-btn { display: block; }
+            .menu-btn {
+                display: block;
+            }
+            
+            header nav {
+                transform: none;
+            }
+            
             header nav ul {
                 display: none;
                 flex-direction: column;
@@ -554,19 +562,70 @@
                 width: 100%;
                 background-color: rgba(0, 0, 0, 0.95);
                 padding: 15px 0;
+                margin: 0;
+                align-items: center;
                 border-radius: 0 0 10px 10px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
                 animation: fadeIn 0.3s ease;
+                z-index: 1001;
             }
-            header nav ul.show { display: flex; }
-            header nav ul li { margin: 5px 0; width: 100%; text-align: center; }
-            header nav ul li a { font-size: 1.2rem; padding: 12px; display: inline-block; }
-            .course-title { font-size: 2rem; }
-            .chapters-grid { grid-template-columns: 1fr; gap: 20px; }
-            .main-content { padding: 10px; margin-top: 180px; }
-            .social-links { gap: 15px; }
-            .social-link { width: 45px; height: 45px; font-size: 1.3rem; }
-            .resource-btn { padding: 10px 12px; font-size: 0.85rem; }
-            .modal-content { width: 95%; height: 90vh; padding: 15px; }
+            
+            header nav ul.show {
+                display: flex;
+            }
+            
+            header nav ul li {
+                margin: 5px 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            header nav ul li a {
+                font-size: 1.2rem;
+                padding: 12px;
+                display: inline-block;
+                color: #ffeb3b;
+                transition: background-color 0.2s;
+            }
+            
+            header nav ul li a:hover {
+                background-color: rgba(255, 255, 255, 0.15);
+            }
+            
+            .course-title {
+                font-size: 2rem;
+            }
+            
+            .chapters-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .main-content {
+                padding: 10px;
+                margin-top: 180px;
+            }
+            
+            .social-links {
+                gap: 15px;
+            }
+            
+            .social-link {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+            
+            .resource-btn {
+                padding: 10px 12px;
+                font-size: 0.85rem;
+            }
+
+            .modal-content {
+                width: 95%;
+                height: 90vh;
+                padding: 15px;
+            }
         }
         
         @keyframes fadeIn {
@@ -611,7 +670,7 @@
             <h2 class="semester-title">Semestre 1</h2>
             
             <div class="chapters-grid">
-                <!-- Partie 1 -->
+                <!-- الفصل 1: Prélèvements en biochimie partie 1 -->
                 <div class="chapter-card" onclick="toggleChapter(this)">
                     <div class="free-badge">GRATUIT</div>
                     <div class="chapter-content">
@@ -633,7 +692,7 @@
                     </div>
                 </div>
                 
-                <!-- Partie 2 -->
+                <!-- الفصل 2: Prélèvements en biochimie partie 2 -->
                 <div class="chapter-card" onclick="toggleChapter(this)">
                     <div class="chapter-content">
                         <div class="chapter-title">
@@ -656,6 +715,7 @@
             </div>
         </div>
         
+        <!-- قسم زر الامتحان النهائي -->
         <div class="module-exam-container">
             <button class="module-exam-btn" onclick="window.location.href='Examen Biochimie.html'">
                 <i class="fas fa-file-alt"></i> Examen de module
@@ -747,11 +807,10 @@
             const modal = document.getElementById('resourceModal');
             const iframe = document.getElementById('resourceFrame');
             modal.style.display = 'none';
-            iframe.src = ''; // إيقاف التحميل
+            iframe.src = '';
             document.body.style.overflow = 'auto';
         }
         
-        // إغلاق المودال عند النقر خارج المحتوى
         window.onclick = function(event) {
             const modal = document.getElementById('resourceModal');
             if (event.target === modal) {
